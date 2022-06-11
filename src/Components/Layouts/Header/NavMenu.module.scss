@@ -31,20 +31,20 @@
     transform: translate(0);
   }
 
-  &__item {
+  li {
     padding: 1rem;
     margin: 2rem 0;
+
+    a {
+      transition: all 0.3s;
+      &:hover {
+        color: $red;
+      }
+    }
 
     @media only screen and (min-width: $bp-md) {
       display: inline-block;
       margin: 0;
-    }
-  }
-
-  &__link {
-    transition: all 0.3s;
-    &:hover {
-      color: $red;
     }
   }
 }

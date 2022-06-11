@@ -17,9 +17,12 @@
   &__title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-    img{
+    @media only screen and (min-width: $bp-md) {
+      justify-content: space-between;
+    }
+
+    img {
       width: 3rem;
       margin: 0 1rem;
     }

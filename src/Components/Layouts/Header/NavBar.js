@@ -3,6 +3,7 @@ import { useState } from 'react';
 import classes from './Navbar.module.scss';
 import ContainerGrid from '../../UI/ContainerGrid';
 import NavMenu from './NavMenu';
+import navIcon from '../../../assets/img/favicon.png';
 
 const Navbar = props => {
   const [menuIsShown, setMenuIsShowen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = props => {
   return (
     <ContainerGrid className={classes.nav}>
       <div className={classes.nav__title}>
-        <img alt="App icon" src="./favicon.png" />
+        <img alt="App icon" src={navIcon} />
         <span>Online Shop</span>
       </div>
       <NavMenu isActive={menuIsShown} />
