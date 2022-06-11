@@ -1,0 +1,42 @@
+@import '../src/Sass/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active,
+a:link,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 50%;
+
+  @media only screen and (min-width: $bp-md) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  background-color: #f5f4f4;
+}
+
+/* GLOBAL */
+
+.center-text {
+  text-align: center;
+}
+
+.m-auto {
+  margin: 0 auto;
+}

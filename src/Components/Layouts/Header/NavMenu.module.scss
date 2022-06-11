@@ -1,0 +1,54 @@
+@import '../../../Sass/variables';
+
+.nav {
+  position: absolute;
+  width: 380px;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  color: #fff;
+  font-size: 2rem;
+  padding: 5rem 2rem;
+  background-color: #1d1d1d;
+  z-index: 1000;
+  transition: transform 0.3s;
+
+  transform: translateX(-100%);
+
+  @media only screen and (max-width: $bp-sm) {
+    width: 250px;
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    position: static;
+    background-color: transparent;
+    color: #1d1d1d;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    transform: translate(0);
+  }
+
+  &__item {
+    padding: 1rem;
+    margin: 2rem 0;
+
+    @media only screen and (min-width: $bp-md) {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    transition: all 0.3s;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.isActive {
+  transform: translate(0);
+}

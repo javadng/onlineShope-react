@@ -1,5 +1,13 @@
+import { Fragment } from 'react';
+// import classes from './app.module.scss';
+import Header from './Components/Layouts/Header/Header';
+
 const App = () => {
-  return <h1>Start</h1>;
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 };
 
 export default App;

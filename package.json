@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "shop",
   "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.52.3"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,13 +36,8 @@
       "last 1 safari version"
     ]
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "sass": "^1.52.3"
+  "dependencies": {
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0"
   }
 }
