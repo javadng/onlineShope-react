@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 
 import Header from './Components/Layouts/Header/Header';
 import Products from './Components/Product/Products';
+import Blog from './Components/blog/Blog';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <main>
         <AboutUs />
         <Products />
+        <Blog />
       </main>
     </Fragment>
   );

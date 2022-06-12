@@ -1,7 +1,7 @@
 @import '../../../Sass/variables';
 
 .nav {
-  position: absolute;
+  position: fixed;
   width: 380px;
   left: 0;
   top: 0;
@@ -12,6 +12,7 @@
   background-color: #1d1d1d;
   z-index: 1000;
   transition: transform 0.3s;
+
 
   transform: translateX(-100%);
 
