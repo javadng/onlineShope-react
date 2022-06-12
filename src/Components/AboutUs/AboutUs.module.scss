@@ -7,9 +7,6 @@
   transform: translateY(-5rem);
   box-shadow: 0 0 0.6rem rgba($color: #000000, $alpha: 0.3);
 
-  &__top {
-  }
-
   &__title {
     padding: 2rem 0;
   }
@@ -32,6 +29,7 @@
     color: #fff;
     font-size: 2rem;
     margin: 2rem 0;
+    padding: 1.8rem 6rem;
   }
 
   &__bottom {

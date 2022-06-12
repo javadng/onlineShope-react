@@ -1,5 +1,5 @@
-import Button from 'src/Components/UI/Button.js';
-import Container from 'src/Components/UI/Container';
+import Button from '../UI/Button';
+import Container from '../UI/Container';
 
 import icon from '../../assets/img/favicon.png';
 
@@ -13,13 +13,16 @@ const AboutUs = props => {
         <h1 className={classes.about__title}>About Us</h1>
         <span className={classes.about__subtitle}>amazing online Shop</span>
         <p className={classes.about__desc}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.repellendus optio nobis ad quod.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.repellendus
+          optio nobis ad quod.
         </p>
         <p className={classes.about__desc}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda
           officia tempora a accusamus rem repellendus optio nobis ad quod.
         </p>
-        <Button className={classes.about__btn}>read more</Button>
+        <Button className={`${classes.about__btn} btn-animated`}>
+          read more
+        </Button>
       </div>
       <div className={classes.about__bottom}>
         <OurOptions
