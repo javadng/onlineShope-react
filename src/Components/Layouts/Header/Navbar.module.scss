@@ -86,9 +86,10 @@
   }
 
   &__shop--icon {
-    border: 1px solid $red;
+    color: $light-green;
     display: inline-block;
-    padding: 1.2rem 0.5rem;
+    padding: 1rem 2rem;
+    box-shadow: inset 0 0 0.6rem rgba($color: #000000, $alpha: 0.1);
     cursor: pointer;
     margin: 0 1rem;
     border-radius: 1rem;
@@ -113,5 +114,19 @@
 
   &::before {
     transform: rotate(-45deg);
+  }
+}
+
+.modal__header {
+  text-align: end;
+
+  .modal__btn {
+    margin: 2rem 4rem 0;
+    font-size: 2.5rem;
+    
+    &:hover {
+      background-color: $royalred;
+      color: #fff;
+    }
   }
 }

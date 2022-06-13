@@ -20,6 +20,12 @@ a:hover {
   color: inherit;
 }
 
+input,
+input:focus {
+border: none;
+outline: none;
+}
+
 html {
   font-size: 50%;
 
@@ -32,6 +38,7 @@ body {
   background-color: #f5f4f4;
   font-family: 'Roboto', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
 }
 
 /* GLOBAL */

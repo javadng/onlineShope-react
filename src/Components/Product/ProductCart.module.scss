@@ -1,0 +1,52 @@
+.productcart {
+  display: grid;
+  grid-template-columns: minmax(15rem, 18rem) minmax(max-content, 1fr) minmax(4rem, 10rem);
+  font-size: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: 2rem auto;
+  padding-right: 1rem;
+
+  .img__holder {
+    height: 18.5rem;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.number__procut {
+  display: flex;
+  justify-content: space-evenly;
+  height: 4rem;
+  border: 1px solid;
+  align-items: center;
+
+  .increase {
+  }
+
+  .decrease,
+  .increase {
+    transition: all 0.1s;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  input[type='number'] {
+    text-align: center;
+    display: inline-block;
+    width: 60%;
+    // padding: 1rem;
+  }
+}
