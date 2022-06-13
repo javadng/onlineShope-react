@@ -1,5 +1,4 @@
 import classes from './Footer.module.scss';
-import ContainerGrid from '../../UI/ContainerGrid';
 import FooterLists from './FooterLists';
 
 const Footer = props => {
