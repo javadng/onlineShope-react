@@ -22,7 +22,7 @@ const Navbar = props => {
         <img alt="App icon" src={navIcon} />
         <span>Online Shop</span>
       </div>
-      <NavMenu isActive={menuIsShown} />
+      <NavMenu isActive={menuIsShown} onToggleFn={menuToggelerHandler} />
       <div className={classes.nav__icons}>
         <span className={classes['nav__shop--icon']}>Shop</span>
         <div className={classes.nav__toggeler} onClick={menuToggelerHandler}>

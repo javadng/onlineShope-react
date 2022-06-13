@@ -11,7 +11,7 @@ const ProductItem = props => {
         <img src={props.img} alt="product item" />
         <div className={classes.productitem__icons}>
           <FontAwesomeIcon icon={solid('heart')} color="red" />
-          <FontAwesomeIcon icon={solid('user-circle')} />
+          <FontAwesomeIcon icon={solid('user-circle')} color='#fff' />
         </div>
       </figure>
       <span className={classes['productitem--title']}>{props.title}</span>
