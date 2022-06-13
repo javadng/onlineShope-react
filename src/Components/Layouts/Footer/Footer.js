@@ -1,7 +1,13 @@
-// import classe from './Footer.module.scss';
+import classes from './Footer.module.scss';
+import ContainerGrid from '../../UI/ContainerGrid';
+import FooterLists from './FooterLists';
 
 const Footer = props => {
-  return <h1>Footer</h1>;
+  return (
+    <footer className={classes.footer}>
+      <FooterLists />
+    </footer>
+  );
 };
 
 export default Footer;

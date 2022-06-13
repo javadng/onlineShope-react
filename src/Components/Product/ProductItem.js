@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+
 import Button from '../UI/Button';
 import classes from './ProductItem.module.scss';
 
@@ -6,6 +9,10 @@ const ProductItem = props => {
     <div className={classes.productitem}>
       <figure className={classes.productitem__img}>
         <img src={props.img} alt="product item" />
+        <div className={classes.productitem__icons}>
+          <FontAwesomeIcon icon={solid('heart')} color="red" />
+          <FontAwesomeIcon icon={solid('user-circle')} />
+        </div>
       </figure>
       <span className={classes['productitem--title']}>{props.title}</span>
       <span className={classes.price}>$115</span>
