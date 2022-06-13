@@ -1,6 +1,17 @@
+@import '../../Sass/variables';
+
 .productcart {
   display: grid;
-  grid-template-columns: minmax(15rem, 18rem) minmax(max-content, 1fr) minmax(4rem, 10rem);
+  grid-template-columns: minmax(15rem, 18rem) minmax(max-content, 1fr) minmax(
+      4rem,
+      10rem
+    );
+
+  @media only screen and (max-width: $bp-md) {
+    grid-template-columns: minmax(15rem, 18rem) 1fr;
+    grid-template-rows: repeat(2, 10rem);
+  }
+
   font-size: 2rem;
   background-color: #fff;
   border-radius: 1rem;
@@ -12,7 +23,11 @@
   padding-right: 1rem;
 
   .img__holder {
-    height: 18.5rem;
+    height: 100%;
+
+    @media only screen and (max-width: $bp-md) {
+      grid-row: 1 / -1;
+    }
 
     img {
       object-fit: cover;
@@ -22,12 +37,28 @@
   }
 }
 
+.title {
+  padding-top: 2rem;
+  @media only screen and (max-width: $bp-md) {
+    align-self: start;
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+}
+
 .number__procut {
   display: flex;
   justify-content: space-evenly;
   height: 4rem;
   border: 1px solid;
   align-items: center;
+
+  @media only screen and (max-width: $bp-md) {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+
+    width: 60%;
+  }
 
   .increase {
   }
