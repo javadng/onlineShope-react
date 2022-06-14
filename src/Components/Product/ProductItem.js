@@ -1,22 +1,42 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../store/cart-slice';
+
 import Button from '../UI/Button';
 import classes from './ProductItem.module.scss';
 
 const ProductItem = props => {
+  const dispatch = useDispatch();
+
+  const { name, description, price, id } = props;
+
+  const addToCartHandler = () => {
+    dispatch(
+      cartActions.addItemToCart({
+        id,
+        name,
+        price,
+      })
+    );
+  };
+
   return (
     <div className={classes.productitem}>
       <figure className={classes.productitem__img}>
         <img src={props.img} alt="product item" />
         <div className={classes.productitem__icons}>
           <FontAwesomeIcon icon={solid('heart')} color="red" />
-          <FontAwesomeIcon icon={solid('user-circle')} color='#fff' />
+          <FontAwesomeIcon icon={solid('user-circle')} color="#fff" />
         </div>
       </figure>
-      <span className={classes['productitem--title']}>{props.title}</span>
-      <span className={classes.price}>$115</span>
-      <Button className={classes.addbtn}>Add to Cart</Button>
+      <span className={classes['productitem--title']}>{name}</span>
+      <p className={classes['productitem--desc']}>{description}</p>
+      <span className={classes.price}>${price.toFixed(2)}</span>
+      <Button className={classes.addbtn} onClick={addToCartHandler}>
+        Add to Cart
+      </Button>
     </div>
   );
 };

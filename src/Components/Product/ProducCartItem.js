@@ -6,10 +6,10 @@ const ProductCartItem = props => {
       <figure className={classes.img__holder}>
         <img alt="" src={props.img} />
       </figure>
-      <span className={classes.title}>{props.title}</span>
+      <span className={classes.title}>{props.name}</span>
       <div className={classes.number__procut}>
         <span className={classes.decrease}>-</span>
-        <input type="number" min="0" placeholder='1'/>
+        <input type="number" min="0" placeholder="1" />
         <span className={classes.increase}>+</span>
       </div>
     </li>

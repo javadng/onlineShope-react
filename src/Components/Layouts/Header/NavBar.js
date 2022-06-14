@@ -2,20 +2,19 @@ import { Fragment, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { useSelector } from 'react-redux';
 
 import classes from './Navbar.module.scss';
 import ContainerGrid from '../../UI/ContainerGrid';
 import NavMenu from './NavMenu';
 import navIcon from '../../../assets/img/favicon.png';
-import Button from '../../UI/Button';
-import Modal from '../../UI/Modal/Modal';
-import ProductCartItem from '../../Product/ProducCartItem';
-import productImage from '../../../assets/img/photo-1.jpg';
+import Cart from '../../Cart/Cart';
 
 const Navbar = props => {
+  const [menuIsShown, setMenuIsShowen] = useState(false);
   const [modalShown, setModalShown] = useState(false);
 
-  const [menuIsShown, setMenuIsShowen] = useState(false);
+  const { totalQuantity } = useSelector(state => state.cart);
 
   const menuToggelerHandler = () => {
     setMenuIsShowen(prevState => !prevState);
@@ -32,16 +31,7 @@ const Navbar = props => {
   return (
     <Fragment>
       {modalShown && (
-        <Modal
-          shownState={modalShown}
-          title="Your Cart"
-          className={classes.modal__header}
-          toggle={modalShownHandler}
-        >
-          <ProductCartItem img={productImage} title="T-Shirt" />
-          <ProductCartItem img={productImage} title="T-Shirt" />
-          <Button className={classes.modal__btn}>Go to Shop</Button>
-        </Modal>
+        <Cart modalState={modalShown} togglerFn={modalShownHandler} />
       )}
       <ContainerGrid className={classes.nav}>
         <div className={classes.nav__title}>
@@ -55,6 +45,7 @@ const Navbar = props => {
             className={classes['nav__shop--icon']}
           >
             <FontAwesomeIcon icon={solid('shopping-cart')} size="lg" />
+            <b className={classes.cart__quantity}>{totalQuantity}</b>
           </span>
           <div className={classes.nav__toggeler} onClick={menuToggelerHandler}>
             <span className={togglerClass}></span>

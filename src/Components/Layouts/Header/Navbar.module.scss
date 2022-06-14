@@ -28,6 +28,11 @@
     }
   }
 
+  .cart__quantity {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
+
   &__toggeler {
     background-color: #eee;
     padding: 1rem;
@@ -114,19 +119,5 @@
 
   &::before {
     transform: rotate(-45deg);
-  }
-}
-
-.modal__header {
-  text-align: end;
-
-  .modal__btn {
-    margin: 2rem 4rem 0;
-    font-size: 2.5rem;
-    
-    &:hover {
-      background-color: $royalred;
-      color: #fff;
-    }
   }
 }
