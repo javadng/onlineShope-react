@@ -8,8 +8,12 @@
     );
 
   @media only screen and (max-width: $bp-md) {
-    grid-template-columns: minmax(15rem, 18rem) 1fr;
+    grid-template-columns: minmax(10rem, 18rem) 1fr;
     grid-template-rows: repeat(2, 10rem);
+  }
+
+  @media only screen and (max-width: $bp-xs) {
+    grid-template-columns: 1fr;
   }
 
   font-size: 2rem;
@@ -85,4 +89,10 @@
     display: inline-block;
     width: 60%;
   }
+}
+
+.product__name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

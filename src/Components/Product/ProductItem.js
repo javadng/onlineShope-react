@@ -3,6 +3,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
+import { uiActions } from '../../store/ui-slice';
 
 import Button from '../UI/Button';
 import classes from './ProductItem.module.scss';
@@ -18,6 +19,14 @@ const ProductItem = props => {
         id,
         name,
         price,
+      })
+    );
+
+    dispatch(
+      uiActions.showNotification({
+        status: 'success',
+        titile: '',
+        message: 'Item Added to cart',
       })
     );
   };

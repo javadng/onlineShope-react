@@ -27,7 +27,7 @@ const CartItem = props => {
         <img alt="" src={img} />
       </figure>
       <div className={classes.product__detail}>
-        <span>{name}</span>
+        <span className={classes.product__name}>{name}</span>
         <span>Price: {price.toFixed(2)} $</span>
         <span>Total: {totalPrice.toFixed(2)} $</span>
       </div>

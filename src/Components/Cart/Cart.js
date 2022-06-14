@@ -7,7 +7,8 @@ import CartItem from './CartItem';
 import imageP from '../../assets/img/photo-1.jpg';
 
 const Cart = props => {
-  const items = useSelector(state => state.cart.items);
+  const cartSlice = useSelector(state => state.cart);
+  const { items, totalPrice } = cartSlice;
 
   const modalContent = items.map(item => (
     <CartItem
@@ -31,6 +32,7 @@ const Cart = props => {
       {modalContent || (
         <p className="center-text fs-2 warning-color">No Item Add some..</p>
       )}
+      <Button className={classes.modal__btn}>$ {totalPrice}</Button>
       <Button className={classes.modal__btn}>Go to Shop</Button>
     </Modal>
   );

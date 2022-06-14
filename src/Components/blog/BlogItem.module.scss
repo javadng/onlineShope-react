@@ -1,7 +1,7 @@
 @import '../../Sass/variables';
 
 .blogitem {
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: grid;
   grid-template-columns: 8rem minmax(20rem, 1fr);
   grid-template-rows: repeat(2, 11rem);
