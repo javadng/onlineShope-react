@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Suspense } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { uiActions } from './store/ui-slice';
@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Tooltip from './Components/UI/tooltip/Tooltip';
 import Home from './pages/Home';
+import Spinner from './Components/UI/spinners/Spinner';
 
 const SingleBlog = React.lazy(() => import('./pages/SingleBlog'));
 const Checkout = React.lazy(() => import('./pages/Checkout'));
@@ -22,11 +23,11 @@ const App = () => {
   if (notification) {
     setTimeout(() => {
       dispatch(uiActions.closeTooltip());
-    }, 5000);
+    }, 3000);
   }
 
   return (
-    <Fragment>
+    <Suspense fallback={<Spinner />}>
       {notification && <Tooltip message={notification.message} />}
       <Routes>
         <Route path="/*" element={<Home />} />
@@ -37,7 +38,7 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
-    </Fragment>
+    </Suspense>
   );
 };
 
