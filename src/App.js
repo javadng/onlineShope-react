@@ -29,7 +29,7 @@ const App = () => {
       {notification && <Tooltip message={notification.message} />}
       <Routes>
         <Route path="/*" element={<Home />} />
-        <Route path="/home/*" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/:productId" element={<SingleProduct />} />
         <Route path="/blog" element={<SingleBlog />} />
         <Route path="/checkout" element={<Checkout />} />
