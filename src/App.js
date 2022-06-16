@@ -1,13 +1,16 @@
-import AboutUs from './Components/AboutUs/AboutUs';
 import { Fragment } from 'react';
 
-import Header from './Components/Layouts/Header/Header';
-import Products from './Components/Product/Products';
-import Blog from './Components/blog/Blog';
-import Footer from './Components/Layouts/Footer/Footer';
 import { useDispatch, useSelector } from 'react-redux';
 import Tooltip from './Components/UI/tooltip/Tooltip';
 import { uiActions } from './store/ui-slice';
+import Home from './pages/Home';
+import SingleProduct from './pages/SingleProduct';
+
+import { Route, Routes } from 'react-router-dom';
+import SingleBlog from './pages/SingleBlog';
+import Checkout from './pages/Checkout';
+import ContactUs from './pages/ContactUs';
+import Categories from './pages/Categories';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,13 +27,15 @@ const App = () => {
   return (
     <Fragment>
       {notification && <Tooltip message={notification.message} />}
-      <Header />
-      <main>
-        <AboutUs />
-        <Products />
-        <Blog />
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/*" element={<Home />} />
+        <Route path="/home/*" element={<Home />} />
+        <Route path="/:productId" element={<SingleProduct />} />
+        <Route path="/blog" element={<SingleBlog />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
     </Fragment>
   );
 };

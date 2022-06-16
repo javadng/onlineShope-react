@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
 import Overlay from '../../UI/Modal/Overlay';
 import classes from './NavMenu.module.scss';
 
@@ -10,34 +11,34 @@ const NavMenu = props => {
       {props.isActive && <Overlay onClick={props.onToggleFn} />}
       <ul className={`${classes.nav} ${navClassActive}`}>
         <li className={classes.nav__item}>
-          <a href="text" className={classes.nav__link}>
+          <NavLink to="/home" href="text" className={classes.nav__link}>
             Home
-          </a>
+          </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <a href="text" className={classes.nav__link}>
+          <NavLink to="/categories" href="text" className={classes.nav__link}>
             Products
-          </a>
+          </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <a href="text" className={classes.nav__link}>
+          <NavLink to="/" href="text" className={classes.nav__link}>
             Demo
-          </a>
+          </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <a href="text" className={classes.nav__link}>
+          <NavLink to="/blog" href="text" className={classes.nav__link}>
             Blog
-          </a>
+          </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <a href="text" className={classes.nav__link}>
+          <NavLink to="/checkout" href="text" className={classes.nav__link}>
             Order
-          </a>
+          </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <a href="text" className={classes.nav__link}>
+          <NavLink to="/contact-us" href="text" className={classes.nav__link}>
             Contact Us
-          </a>
+          </NavLink>
         </li>
       </ul>
     </Fragment>

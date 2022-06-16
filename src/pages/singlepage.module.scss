@@ -1,0 +1,19 @@
+@import '../Sass/variables';
+
+.single__product {
+  margin: 5rem auto;
+  font-size: 3rem;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-template-columns: minmax(20rem, 30rem) 1fr;
+  }
+}
+
+.detaile {
+  background-color: plum;
+}
+
+.related {
+  background-color: palegoldenrod;
+}

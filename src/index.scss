@@ -11,6 +11,10 @@ li {
   list-style: none;
 }
 
+a:link {
+  transition: all 0.2s;
+}
+
 a,
 a:visited,
 a:active,
@@ -22,8 +26,8 @@ a:hover {
 
 input,
 input:focus {
-border: none;
-outline: none;
+  border: none;
+  outline: none;
 }
 
 html {
@@ -67,13 +71,11 @@ body {
   margin-bottom: 3rem;
 }
 
-
-.fs-3{
+.fs-3 {
   font-size: 3rem;
 }
 
-
-.fs-2{
+.fs-2 {
   font-size: 2rem;
 }
 

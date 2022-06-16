@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
 import { uiActions } from '../../store/ui-slice';
 
+import { Link } from 'react-router-dom';
+
 import Button from '../UI/Button';
 import classes from './ProductItem.module.scss';
 
@@ -40,7 +42,9 @@ const ProductItem = props => {
           <FontAwesomeIcon icon={solid('user-circle')} color="#fff" />
         </div>
       </figure>
-      <span className={classes['productitem--title']}>{name}</span>
+      <Link to={`/${id}`} className={classes['productitem--title']}>
+        {name} &rarr;
+      </Link>
       <p className={classes['productitem--desc']}>{description}</p>
       <span className={classes.price}>${price.toFixed(2)}</span>
       <Button className={classes.addbtn} onClick={addToCartHandler}>
