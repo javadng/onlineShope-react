@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 8rem;
   align-items: center;
+  
 
   @media only screen and (min-width: $bp-md) {
     grid-template-columns: max-content 1fr 15rem;

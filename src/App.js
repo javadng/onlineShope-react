@@ -1,16 +1,17 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import Tooltip from './Components/UI/tooltip/Tooltip';
 import { uiActions } from './store/ui-slice';
-import Home from './pages/Home';
-import SingleProduct from './pages/SingleProduct';
-
 import { Route, Routes } from 'react-router-dom';
-import SingleBlog from './pages/SingleBlog';
-import Checkout from './pages/Checkout';
-import ContactUs from './pages/ContactUs';
-import Categories from './pages/Categories';
+
+import Tooltip from './Components/UI/tooltip/Tooltip';
+import Home from './pages/Home';
+
+const SingleBlog = React.lazy(() => import('./pages/SingleBlog'));
+const Checkout = React.lazy(() => import('./pages/Checkout'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs'));
+const SingleProduct = React.lazy(() => import('./pages/SingleProduct'));
+const Categories = React.lazy(() => import('./pages/Categories'));
 
 const App = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const App = () => {
       {notification && <Tooltip message={notification.message} />}
       <Routes>
         <Route path="/*" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home/*" element={<Home />} />
         <Route path="/:productId" element={<SingleProduct />} />
         <Route path="/blog" element={<SingleBlog />} />
         <Route path="/checkout" element={<Checkout />} />

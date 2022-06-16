@@ -5,6 +5,7 @@ import Button from '../UI/Button';
 import Modal from '../UI/Modal/Modal';
 import CartItem from './CartItem';
 import imageP from '../../assets/img/photo-1.jpg';
+import { NavLink } from 'react-router-dom';
 
 const Cart = props => {
   const cartSlice = useSelector(state => state.cart);
@@ -33,7 +34,7 @@ const Cart = props => {
         <p className="center-text fs-2 warning-color">No Item Add some..</p>
       )}
       <Button className={classes.modal__btn}>$ {totalPrice}</Button>
-      <Button className={classes.modal__btn}>Go to Shop</Button>
+      <NavLink to='/checkout' className={`${classes.modal__btn} btn`}>Shopping</NavLink>
     </Modal>
   );
 };

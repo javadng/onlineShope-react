@@ -12,8 +12,6 @@
   background-color: #1d1d1d;
   z-index: 1000;
   transition: transform 0.3s;
-
-
   transform: translateX(-100%);
 
   @media only screen and (max-width: $bp-sm) {

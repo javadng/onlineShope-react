@@ -16,8 +16,8 @@ const SingleProduct = props => {
   return (
     <Main>
       <ContainerGrid className={classes.single__product}>
-        <div className={classes.detaile}>product detaile</div>
         <div className={classes.related}>product related</div>
+        <div className={classes.detaile}>product detaile</div>
       </ContainerGrid>
     </Main>
   );
