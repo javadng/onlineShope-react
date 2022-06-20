@@ -40,6 +40,8 @@ const SingleTabs = props => {
 
   const [navTabState, navTabDispatch] = useReducer(reducer, initalStateReduc);
 
+  const { reviews, AdditionalInformation, desc } = props;
+
   return (
     <section className={containerClasses}>
       <header className={classes.tabHeader}>
@@ -65,34 +67,15 @@ const SingleTabs = props => {
             navTabState.showReview
           )}`}
         >
-          Review (1)
+          Review ({reviews.length})
         </span>
       </header>
       <div className={classes.textHolder}>
-        {navTabState.showDesc && (
-          <p className={classes.desc}>
-            Desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-            iusto molestiae harum esse accusantium eius inventore aperiam quidem
-            provident earum odio porro aut ducimus, nam maxime reprehenderit
-            necessitatibus quas numquam.
-          </p>
-        )}
+        {navTabState.showDesc && <p className={classes.desc}>{desc}</p>}
         {navTabState.showInfo && (
-          <p className={classes.info}>
-            info Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-            iusto molestiae harum esse accusantium eius inventore aperiam quidem
-            provident earum odio porro aut ducimus, nam maxime reprehenderit
-            necessitatibus quas numquam.
-          </p>
+          <p className={classes.info}>{AdditionalInformation}</p>
         )}
-        {navTabState.showReview && (
-          <p className={classes.review}>
-            Review Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nisi iusto molestiae harum esse accusantium eius inventore aperiam
-            quidem provident earum odio porro aut ducimus, nam maxime
-            reprehenderit necessitatibus quas numquam.
-          </p>
-        )}
+        {navTabState.showReview && <p className={classes.review}>{reviews}</p>}
       </div>
     </section>
   );

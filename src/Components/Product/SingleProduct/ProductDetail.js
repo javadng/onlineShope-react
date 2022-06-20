@@ -1,56 +1,106 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../../store/cart-slice';
+import { uiActions } from '../../../store/ui-slice';
 import Button from '../../UI/Button';
 import InputChangeNumber from '../../UI/InputChangeNumber';
 
 import classes from './ProductDetail.module.scss';
-import imageP from '../../../assets/img/photo-1.jpg';
 import SingleTabs from './SingleTabs';
 
 const ProductDetail = props => {
   const containerClasses = `${props.className} ${classes.product__container}`;
+  const dispatch = useDispatch();
+
+  const {
+    id,
+    AdditionalInfo,
+    baseImgUrl,
+    description,
+    name,
+    price,
+    reviews,
+    subImgsUrl,
+    viewsInfo,
+  } = props.productDetail;
+
+  const [imgUrlState, setImgUrlState] = useState(baseImgUrl);
+
+  const increaseHandler = () => {
+    dispatch(
+      cartActions.addItemToCart({
+        id,
+        name,
+        price,
+      })
+    );
+
+    dispatch(
+      uiActions.showNotification({
+        status: 'success',
+        titile: '',
+        message: 'Item Added to cart',
+      })
+    );
+  };
+
+  const getImgUrlSource = e => {
+    const imgElemUrl = e.target.src;
+    if (!imgElemUrl) return;
+
+    setImgUrlState(imgElemUrl);
+  };
 
   return (
     <div className={containerClasses}>
       <div className={classes.product__image}>
         <figure className={classes.figureImg}>
-          <img src={imageP} alt="" />
-          <div className={classes.subimages}>
-            <img src={imageP} className={classes.subimg} alt="" />
-            <img src={imageP} className={classes.subimg} alt="" />
-            <img src={imageP} className={classes.subimg} alt="" />
-            <img src={imageP} className={classes.subimg} alt="" />
-            <img src={imageP} className={classes.subimg} alt="" />
-            <img src={imageP} className={classes.subimg} alt="" />
+          <img src={imgUrlState} alt={name} />
+          <div onClick={getImgUrlSource} className={classes.subimages}>
+            {subImgsUrl.map(item => (
+              <img
+                key={item.id}
+                src={item.img}
+                className={classes.subimg}
+                alt={name}
+                data-imgurl={item.img}
+              />
+            ))}
           </div>
         </figure>
       </div>
       <div className={classes.detaile}>
-        <h1 className={classes.title}>product Title</h1>
+        <h1 className={classes.title}>{name}</h1>
         <div className={classes.views}>
-          <span>04 Comments</span> |<span>04 Views</span>
+          <span>{viewsInfo.commentsNumber} Comments</span> |
+          <span>{viewsInfo.viewsNumber} Views</span>
         </div>
         <div className={classes.detaile}>
-          <div className={classes.price}>$999.00</div>
-          <p className={classes.desc}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
-            alias quos dignissimos eligendi eaque, veniam eos sed praesentium
-            cupiditate? Placeat totam sunt laborum iure repudiandae nisi
-            molestias laboriosam harum facilis
-          </p>
+          <div className={classes.price}>${price}</div>
+          <p className={classes.desc}>{description}</p>
         </div>
         <div className={classes.addoptions}>
           <InputChangeNumber
             className={classes.changeQuantities}
-            price={'price'}
-            id={Math.random()}
-            name={'name'}
-            quantity={'quantity'}
+            price={price}
+            id={id}
+            name={name}
+            quantity=""
           />
-          <Button className={`${classes.product__btn} btn-animated`}>
+          <Button
+            onClick={increaseHandler}
+            className={`${classes.product__btn} btn-animated`}
+          >
             Add to Cart
           </Button>
         </div>
       </div>
-      <SingleTabs className={classes.tabs} />
+      <SingleTabs
+        reviews={reviews}
+        AdditionalInformation={AdditionalInfo}
+        desc={description}
+        className={classes.tabs}
+      />
     </div>
   );
 };

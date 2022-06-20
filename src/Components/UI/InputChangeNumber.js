@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
+import { uiActions } from '../../store/ui-slice';
 
 import classes from './InputChangeNumber.module.scss';
 
@@ -15,6 +16,14 @@ const InputChangeNumber = props => {
         id,
         name,
         price,
+      })
+    );
+
+    dispatch(
+      uiActions.showNotification({
+        status: 'success',
+        titile: '',
+        message: 'Item Added to cart',
       })
     );
   };

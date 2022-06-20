@@ -40,7 +40,6 @@
   }
 
   img.subimg {
-    border-radius: 50%;
     width: 10rem;
     height: 10rem;
     margin: 0 1rem;
@@ -62,15 +61,16 @@
 }
 
 .detaile {
-  grid-column: 3 / -1;
-
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   padding: 0.5rem 2rem;
   font-size: 2rem;
+  margin-bottom: 5rem;
+  // grid-auto-flow: row;
 
-  @media only screen and (max-width: $bp-md) {
-    grid-auto-flow: row;
+  @media only screen and (min-width: $bp-lg) {
+    grid-column: 3 / -1;
   }
 }
 
@@ -144,7 +144,7 @@
   border: none;
   box-shadow: 0 0 0.6rem rgba($color: #000000, $alpha: 0.2);
   height: 5rem;
-  max-width: 15rem;
+  max-width: 10rem;
   border-radius: 2rem;
 
   @media only screen and (max-width: $bp-md) {
