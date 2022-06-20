@@ -10,6 +10,11 @@ const NavMenu = props => {
     <Fragment>
       {props.isActive && <Overlay onClick={props.onToggleFn} />}
       <ul className={`${classes.nav} ${navClassActive}`}>
+        {props.isActive && (
+          <span className={classes.closeBtn} onClick={props.onToggleFn}>
+            X
+          </span>
+        )}
         <li className={classes.nav__item}>
           <NavLink to="/home" href="text" className={classes.nav__link}>
             Home

@@ -6,9 +6,8 @@
 
 .spinner {
   position: absolute;
-  top: 15rem;
-  left: 0;
-  right: 0;
+  left: 45%;
+  z-index: 800;
 }
 
 .spinner:before {

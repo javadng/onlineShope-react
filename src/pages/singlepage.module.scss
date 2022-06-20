@@ -2,18 +2,32 @@
 
 .single__product {
   margin: 5rem auto;
-  font-size: 3rem;
   grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  grid-template-rows: repeat(2, max-content);
 
   @media only screen and (min-width: $bp-md) {
-    grid-template-columns: minmax(20rem, 30rem) 1fr;
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: minmax(15rem, 25rem) 1fr;
   }
 }
 
 .detaile {
-  background-color: plum;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
 }
 
 .related {
-  background-color: palegoldenrod;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
 }

@@ -3,6 +3,8 @@ import ContainerGrid from '../Components/UI/ContainerGrid';
 import Main from '../Components/Layouts/Main';
 
 import classes from './singlepage.module.scss';
+import ProductDetail from '../Components/Product/SingleProduct/ProductDetail';
+import ProductRelated from '../Components/Product/SingleProduct/ProductRelated';
 
 // const product = {
 //   id: 'p3',
@@ -13,11 +15,12 @@ import classes from './singlepage.module.scss';
 // };
 
 const SingleProduct = props => {
+  // const { id, name, quantity, price } = props;
   return (
     <Main>
       <ContainerGrid className={classes.single__product}>
-        <div className={classes.related}>product related</div>
-        <div className={classes.detaile}>product detaile</div>
+        <ProductRelated className={classes.related} />
+        <ProductDetail className={classes.detaile} />
       </ContainerGrid>
     </Main>
   );

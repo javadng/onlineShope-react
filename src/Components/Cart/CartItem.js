@@ -1,25 +1,8 @@
+import InputChangeNumber from '../UI/InputChangeNumber';
 import classes from './CartItem.module.scss';
-import { useDispatch } from 'react-redux';
-import { cartActions } from '../../store/cart-slice';
 
 const CartItem = props => {
   const { id, img, totalPrice, quantity, name, price } = props;
-
-  const dispatch = useDispatch();
-
-  const increaseHandler = () => {
-    dispatch(
-      cartActions.addItemToCart({
-        id,
-        name,
-        price,
-      })
-    );
-  };
-
-  const decreaseHandler = () => {
-    dispatch(cartActions.removeItemFromCart(id));
-  };
 
   return (
     <li className={classes.productcart}>
@@ -31,15 +14,12 @@ const CartItem = props => {
         <span>Price: {price.toFixed(2)} $</span>
         <span>Total: {totalPrice.toFixed(2)} $</span>
       </div>
-      <div className={classes.number__procut}>
-        <span className={classes.decrease} onClick={decreaseHandler}>
-          -
-        </span>
-        <input type="number" min="0" placeholder={quantity} />
-        <span className={classes.increase} onClick={increaseHandler}>
-          +
-        </span>
-      </div>
+      <InputChangeNumber
+        price={price}
+        id={id}
+        name={name}
+        quantity={quantity}
+      />
     </li>
   );
 };
