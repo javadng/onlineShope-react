@@ -8,7 +8,6 @@ import Spinner from '../Components/UI/spinners/Spinner';
 const Categories = props => {
   return (
     <Main>
-        <Spinner />
       <Container>
         <SectionTitle title="New Products" subtitle="summer 2022" />
         <ProductList />
