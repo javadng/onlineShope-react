@@ -75,8 +75,8 @@ const ProductDetail = props => {
           <span>{viewsInfo.commentsNumber} Comments</span> |
           <span>{viewsInfo.viewsNumber} Views</span>
         </div>
-        <div className={classes.detaile}>
-          <div className={classes.price}>${price}</div>
+        <div className={classes.productdesc}>
+          <span className={classes.price}>${price} ~ $300</span>
           <p className={classes.desc}>{description}</p>
         </div>
         <div className={classes.addoptions}>

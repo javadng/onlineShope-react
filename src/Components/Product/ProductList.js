@@ -29,7 +29,7 @@ const allProducts = [
 
 const ProductList = props => {
   return (
-    <GridList>
+    <GridList className={props.className}>
       {allProducts.map(product => (
         <ProductItem
           key={product.id}

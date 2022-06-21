@@ -1,9 +1,19 @@
-import Main from "../Components/Layouts/Main";
+import Main from '../Components/Layouts/Main';
 
+import SectionTitle from '../Components/UI/SectionTitle';
+import ProductList from '../Components/Product/ProductList';
+import Container from '../Components/UI/Container';
 const Categories = props => {
   return (
     <Main>
-      <h1>Categories</h1>;
+      <Container>
+        <SectionTitle title="New Products" subtitle="summer 2022" />
+        <ProductList />
+        <SectionTitle title="Offer Products" subtitle="June 2022" />
+        <ProductList />
+        <SectionTitle title="most sell" subtitle="last weak" />
+        <ProductList />
+      </Container>
     </Main>
   );
 };

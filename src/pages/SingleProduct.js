@@ -11,6 +11,8 @@ import Main from '../Components/Layouts/Main';
 import classes from './singlepage.module.scss';
 import ProductDetail from '../Components/Product/SingleProduct/ProductDetail';
 import ProductRelated from '../Components/Product/SingleProduct/ProductRelated';
+import ProductList from '../Components/Product/ProductList';
+import SectionTitle from '../Components/UI/SectionTitle';
 
 const productInfo = {
   id: 'p3',
@@ -26,7 +28,8 @@ const productInfo = {
     { img: subimg5, id: 'img5' },
     { img: subimg6, id: 'img6' },
   ],
-  description: 'Some Text... (desc)',
+  description:
+    'Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.',
   AdditionalInfo: 'Some Text... (Additional)',
   reviews: ['reviews'],
   viewsInfo: {
@@ -45,6 +48,12 @@ const SingleProduct = props => {
           productDetail={productInfo}
           className={classes.detaile}
         />
+        <SectionTitle
+          title="New Products"
+          subtitle="Summer 2022"
+          className={classes.newProductsTitle}
+        />
+        <ProductList className={classes.newProducts} />
       </ContainerGrid>
     </Main>
   );
