@@ -3,7 +3,6 @@ import Main from '../Components/Layouts/Main';
 import SectionTitle from '../Components/UI/SectionTitle';
 import ProductList from '../Components/Product/ProductList';
 import Container from '../Components/UI/Container';
-import Spinner from '../Components/UI/spinners/Spinner';
 
 const Categories = props => {
   return (
