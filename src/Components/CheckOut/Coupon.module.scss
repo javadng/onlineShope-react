@@ -1,0 +1,15 @@
+.coupon {
+  background-color: #eee;
+  padding: 1rem;
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  &__Click {
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

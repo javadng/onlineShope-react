@@ -1,5 +1,4 @@
 import Button from '../UI/Button';
-import Container from '../UI/Container';
 
 import icon from '../../assets/img/favicon.png';
 
@@ -8,7 +7,7 @@ import OurOptions from './OurOptions';
 
 const AboutUs = props => {
   return (
-    <Container className={classes.about}>
+    <div className={classes.about}>
       <div className={classes.about__top}>
         <h1 className={classes.about__title}>About Us</h1>
         <span className={classes.about__subtitle}>amazing online Shop</span>
@@ -41,7 +40,7 @@ const AboutUs = props => {
           icon={icon}
         />
       </div>
-    </Container>
+    </div>
   );
 };
 

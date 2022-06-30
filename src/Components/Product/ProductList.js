@@ -25,6 +25,27 @@ const allProducts = [
     imgUrl: productImg,
     description: 'This is a Third product - amazing!',
   },
+  {
+    id: 'p4',
+    name: 'My book',
+    price: 5,
+    description: 'This is a  product - amazing!',
+    imgUrl: productImg,
+  },
+  {
+    id: 'p5',
+    name: 'My  book',
+    price: 5,
+    description: 'This is a  product - amazing!',
+    imgUrl: productImg,
+  },
+  {
+    id: 'p6',
+    name: 'My  book',
+    price: 5,
+    description: 'This is a  product - amazing!',
+    imgUrl: productImg,
+  },
 ];
 
 const ProductList = props => {

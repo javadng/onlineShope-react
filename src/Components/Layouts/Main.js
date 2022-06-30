@@ -1,12 +1,15 @@
 import { Fragment } from 'react';
+import Container from '../UI/Container';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
+
+import classes from './main.module.scss';
 
 const Main = props => {
   return (
     <Fragment>
       <Header />
-      <main>{props.children}</main>
+      <Container className={classes.main}>{props.children}</Container>
       <Footer />
     </Fragment>
   );

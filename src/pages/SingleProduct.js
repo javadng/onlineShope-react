@@ -5,7 +5,6 @@ import subimg5 from '../assets/img/photo-5.jpg';
 import subimg6 from '../assets/img/photo-6.jpg';
 import originalPic from '../assets/img/photo-1.jpg';
 
-import ContainerGrid from '../Components/UI/ContainerGrid';
 import Main from '../Components/Layouts/Main';
 
 import classes from './singlepage.module.scss';
@@ -42,7 +41,7 @@ const SingleProduct = props => {
   // const { id, name, quantity, price } = props;
   return (
     <Main>
-      <ContainerGrid className={classes.single__product}>
+      <div className={classes.single__product}>
         <ProductRelated className={classes.related} />
         <ProductDetail
           productDetail={productInfo}
@@ -54,7 +53,7 @@ const SingleProduct = props => {
           className={classes.newProductsTitle}
         />
         <ProductList className={classes.newProducts} />
-      </ContainerGrid>
+      </div>
     </Main>
   );
 };

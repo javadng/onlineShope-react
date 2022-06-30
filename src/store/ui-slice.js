@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const uiSlice = createSlice({
   name: 'UI',
-  initialState: { notification: null },
+  initialState: { notification: null, notificationTimer: null },
   reducers: {
     closeTooltip(state, action) {
       state.notification = null;

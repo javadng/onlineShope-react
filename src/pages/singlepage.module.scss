@@ -1,6 +1,7 @@
 @import '../Sass/variables';
 
 .single__product {
+  display: grid;
   margin: 5rem auto;
   grid-template-columns: 1fr;
   grid-gap: 2rem;

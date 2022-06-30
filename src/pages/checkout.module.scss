@@ -1,0 +1,11 @@
+@import '../Sass/variables';
+
+.orderContainer {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-template-columns: 1fr minmax(30rem, 35rem) ;
+  }
+}
