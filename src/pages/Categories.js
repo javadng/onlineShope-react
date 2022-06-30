@@ -2,7 +2,6 @@ import Main from '../Components/Layouts/Main';
 
 import SectionTitle from '../Components/UI/SectionTitle';
 import ProductList from '../Components/Product/ProductList';
-import Container from '../Components/UI/Container';
 
 import classes from './categories.module.scss';
 
