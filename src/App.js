@@ -8,7 +8,7 @@ import Tooltip from './Components/UI/tooltip/Tooltip';
 import Home from './pages/Home';
 import Spinner from './Components/UI/spinners/Spinner';
 
-const SingleBlog = React.lazy(() => import('./pages/SingleBlog'));
+const Blogs = React.lazy(() => import('./pages/Blogs'));
 const Checkout = React.lazy(() => import('./pages/Checkout'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 const SingleProduct = React.lazy(() => import('./pages/SingleProduct'));
@@ -33,7 +33,7 @@ const App = () => {
         <Route path="/*" element={<Home />} />
         <Route path="/home/*" element={<Home />} />
         <Route path="/:productId" element={<SingleProduct />} />
-        <Route path="/blog" element={<SingleBlog />} />
+        <Route path="/blog" element={<Blogs />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/categories" element={<Categories />} />

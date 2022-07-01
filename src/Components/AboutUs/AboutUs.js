@@ -4,10 +4,11 @@ import icon from '../../assets/img/favicon.png';
 
 import classes from './AboutUs.module.scss';
 import OurOptions from './OurOptions';
+import Container from '../UI/Container';
 
 const AboutUs = props => {
   return (
-    <div className={classes.about}>
+    <Container className={classes.about}>
       <div className={classes.about__top}>
         <h1 className={classes.about__title}>About Us</h1>
         <span className={classes.about__subtitle}>amazing online Shop</span>
@@ -40,7 +41,7 @@ const AboutUs = props => {
           icon={icon}
         />
       </div>
-    </div>
+    </Container>
   );
 };
 

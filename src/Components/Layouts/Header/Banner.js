@@ -4,9 +4,9 @@ const Banner = props => {
   return (
     <div className={classes.banner}>
       <>
-        <span className={classes.banner__trand}>terending 2022</span>
-        <h1 className={classes.banner__title}>Boutique Fashion</h1>
-        <span className={classes.banner__info}>Responsive React.js WebApp</span>
+        <h1 className={classes.banner__title}>{props.title}</h1>
+        <span className={classes.banner__trand}>{props.subTitle}</span>
+        <span className={classes.banner__info}>{props.desc}</span>
       </>
     </div>
   );

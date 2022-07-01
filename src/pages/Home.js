@@ -9,7 +9,16 @@ const Home = props => {
   return (
     <Main>
       <Routes>
-        <Route path="/" element={<Banner />} />
+        <Route
+          path="/"
+          element={
+            <Banner
+              subTitle="terending 2022"
+              title="Boutique Fashion"
+              desc="Responsive React.js WebApp"
+            />
+          }
+        />
       </Routes>
       <AboutUs />
       <Products />

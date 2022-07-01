@@ -1,7 +1,7 @@
 import './Container.scss';
 
 const Container = props => {
-  const classes = props.className + ' container';
+  const classes = `container ${props.className || ''}`;
   return <div className={classes}>{props.children}</div>;
 };
 
