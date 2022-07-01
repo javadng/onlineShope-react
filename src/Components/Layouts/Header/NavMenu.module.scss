@@ -34,10 +34,40 @@
     padding: 1rem;
     margin: 2rem 0;
 
+    .activeLink {
+      color: $red;
+      &::after {
+        color: $red;
+        width: 100%;
+
+        @media only screen and (max-width: $bp-md) {
+          width: 0;
+          // color: ;
+        }
+      }
+    }
+
     a {
       transition: all 0.3s;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        transition: all 0.2s;
+        background-color: $royalred;
+      }
+
       &:hover {
         color: $red;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
 
@@ -60,6 +90,7 @@
   display: inline-block;
   padding: 2rem;
   font-size: 3rem;
+  cursor: pointer;
 }
 
 /* txt */

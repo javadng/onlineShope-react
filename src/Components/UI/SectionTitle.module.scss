@@ -2,9 +2,11 @@
 
 .container {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
+  margin: 2rem 0;
+
   @media only screen and (min-width: $bp-md) {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -14,15 +16,15 @@
 
 .subtitle {
   display: inline-block;
-  margin: 0 auto 5rem;
+  margin: 1rem auto 5rem;
 
   color: $dark-color;
   text-transform: uppercase;
   position: relative;
 
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   @media only screen and (min-width: $bp-md) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   &::after {

@@ -39,17 +39,17 @@ const DUMMY__Tags = [
   {
     id: 't2',
     link: '/home',
-    title: 'Samsumg S21',
+    title: 'Top Products',
   },
   {
     id: 't3',
     link: '/home',
-    title: 'Samsumg S21',
+    title: 'Image',
   },
   {
     id: 't4',
     link: '/home',
-    title: 'Samsumg S21',
+    title: 'Red Scarf',
   },
 ];
 

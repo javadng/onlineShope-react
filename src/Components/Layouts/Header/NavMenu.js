@@ -16,32 +16,68 @@ const NavMenu = props => {
           </span>
         )}
         <li className={classes.nav__item}>
-          <NavLink to="/home" href="text" className={classes.nav__link}>
+          <NavLink
+            to="/home"
+            href="text"
+            className={({ isActive }) =>
+              isActive ? `${classes.activeLink}` : ''
+            }
+          >
             Home
           </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <NavLink to="/categories" href="text" className={classes.nav__link}>
+          <NavLink
+            to="/categories"
+            href="text"
+            className={({ isActive }) =>
+              isActive ? `${classes.activeLink}` : ''
+            }
+          >
             Products
           </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <NavLink to="/" href="text" className={classes.nav__link}>
+          <NavLink
+            to="/"
+            href="text"
+            className={({ isActive }) =>
+              isActive ? `${classes.activeLink}` : ''
+            }
+          >
             Demo
           </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <NavLink to="/blog" href="text" className={classes.nav__link}>
+          <NavLink
+            to="/blog"
+            href="text"
+            className={({ isActive }) =>
+              isActive ? `${classes.activeLink}` : ''
+            }
+          >
             Blog
           </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <NavLink to="/checkout" href="text" className={classes.nav__link}>
+          <NavLink
+            to="/checkout"
+            href="text"
+            className={({ isActive }) =>
+              isActive ? `${classes.activeLink}` : ''
+            }
+          >
             Order
           </NavLink>
         </li>
         <li className={classes.nav__item}>
-          <NavLink to="/contact-us" href="text" className={classes.nav__link}>
+          <NavLink
+            to="/contact-us"
+            href="text"
+            className={({ isActive }) =>
+              isActive ? `${classes.activeLink}` : ''
+            }
+          >
             Contact Us
           </NavLink>
         </li>
