@@ -5,14 +5,14 @@ const BlogItem = props => {
   const btnClasses = `${classes.blog__btn} btn`;
 
   return (
-    <div class={classes.blog}>
+    <div className={classes.blog}>
       <figure className={classes.figureImg}>
         <img src={props.image} alt="blog" />
-        <div class={classes['meta--time']}>
-          <span class={classes.date}>
+        <div className={classes['meta--time']}>
+          <span className={classes.date}>
             <em>{props.date}</em>
           </span>
-          <span class={classes.year}>{props.year}</span>
+          <span className={classes.year}>{props.year}</span>
         </div>
       </figure>
       <header>
