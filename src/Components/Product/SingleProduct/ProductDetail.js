@@ -22,6 +22,7 @@ const ProductDetail = props => {
     reviews,
     subImgsUrl,
     viewsInfo,
+    quantity,
   } = props.productDetail;
 
   const [imgUrlState, setImgUrlState] = useState(baseImgUrl);
@@ -31,6 +32,8 @@ const ProductDetail = props => {
       cartActions.addItemToCart({
         id,
         name,
+        quantity,
+        image: baseImgUrl,
         price,
       })
     );
@@ -85,7 +88,7 @@ const ProductDetail = props => {
             price={price}
             id={id}
             name={name}
-            quantity=""
+            quantity={quantity}
           />
           <Button
             onClick={increaseHandler}

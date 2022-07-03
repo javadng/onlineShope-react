@@ -3,7 +3,7 @@
 .productcart {
   display: grid;
   grid-template-columns: minmax(max-content, 20rem) minmax(15rem, 18rem);
-  grid-template-rows: repeat(2, 15rem);
+  grid-template-rows: repeat(2, 14rem);
   align-content: flex-end;
   font-size: 2rem;
   background-color: #fff;
@@ -12,26 +12,23 @@
   justify-items: center;
   align-items: center;
   width: 80%;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding-right: 1rem;
   justify-content: end;
-
-  // @media only screen and (max-width: $bp-md) {
-  //   grid-template-columns: minmax(10rem, 18rem) 1fr;
-  //   grid-template-rows: repeat(2, 10rem);
-  // }
+  border-bottom: 1px solid #eee;
 
   @media only screen and (max-width: $bp-xs) {
     grid-template-columns: 1fr;
-    grid-template-rows: 25rem 15rem;
+    grid-template-rows: 8rem 25rem;
     width: 100%;
+    grid-gap: 1rem;
   }
 
   .img__holder {
     max-height: 10rem;
 
     @media only screen and (max-width: $bp-xs) {
-      grid-row: 1 / 2;
+      // grid-row: 1 / 2;
       align-self: flex-start;
       text-align: center;
     }
@@ -54,7 +51,7 @@
   @media only screen and (max-width: $bp-xs) {
     // align-self: start;
     // grid-column: 2 / -1;
-    grid-row: 2 / -1;
+    // grid-row: 2 / -1;
   }
 
   span {

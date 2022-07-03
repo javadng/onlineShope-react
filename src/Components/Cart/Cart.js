@@ -1,7 +1,7 @@
 import classes from './Cart.module.scss';
 
 import { useSelector } from 'react-redux';
-import Button from '../UI/Button';
+
 import Modal from '../UI/Modal/Modal';
 import CartItem from './CartItem';
 import { NavLink } from 'react-router-dom';
@@ -33,11 +33,11 @@ const Cart = props => {
         <p className="center-text fs-2 warning-color">No Item Add some..</p>
       )}
       <footer className={classes.cartFooter}>
-        <Button className={classes.modal__btn}>
+        <span className={`btn ${classes.totalPrice}`}>
           totalPrice : $ {totalPrice}
-        </Button>
+        </span>
         <NavLink to="/checkout" className={`${classes.modal__btn} btn`}>
-          Shopping
+          Shopping &rarr;
         </NavLink>
       </footer>
     </Modal>
