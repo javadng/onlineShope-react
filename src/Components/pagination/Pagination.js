@@ -2,6 +2,8 @@ import classes from './Pagination.module.scss';
 import Button from '../UI/Button';
 import { useEffect, useReducer } from 'react';
 
+import arrayCreator from '../../helpers/arrayCreatror';
+import postsSlicer from '../../helpers/postslicer';
 const initialState = {
   currentPage: 1,
   postPerPage: 3,
@@ -32,12 +34,6 @@ const reducerFunction = (state, action) => {
   return initialState;
 };
 
-const changePostsHandler = (allPosts, currentPage, postPerPage) => {
-  const startIndex = currentPage * postPerPage - postPerPage;
-  const endIndex = startIndex + postPerPage;
-  return allPosts.slice(startIndex, endIndex);
-};
-
 const Pagination = props => {
   const [pagesStates, dispatchPages] = useReducer(
     reducerFunction,
@@ -65,13 +61,15 @@ const Pagination = props => {
   };
 
   useEffect(() => {
-    const postsArray = changePostsHandler(
+    const postsArray = postsSlicer(
       allPosts,
       pagesStates.currentPage,
       pagesStates.postPerPage
     );
 
     setPostsState(postsArray);
+
+    window.scrollTo({ behavior: 'smooth', top: '0px' });
   }, [
     pagesStates.currentPage,
     pagesStates.postPerPage,
@@ -84,27 +82,25 @@ const Pagination = props => {
   //   return range(currPage, limitPagination);
   // };
 
-  const range = (start, end) => {
-    let length = end - start + 1;
-
-    return Array.from({ length }, (_, idx) => idx + start);
-  };
-
   let pageBtns;
   const btnClassNames = `${classes.btn}`;
+
   /* last page =>  */
   if (pagesStates.currentPage === allPages) {
-    pageBtns = range(1, pagesStates.currentPage - 1).map((item, index) => {
-      return (
-        <Button key={index} onClick={changePage} className={btnClassNames}>
-          {item}
-        </Button>
-      );
-    });
+    pageBtns = arrayCreator(1, pagesStates.currentPage - 1).map(
+      (item, index) => {
+        return (
+          <Button key={index} onClick={changePage} className={btnClassNames}>
+            {item}
+          </Button>
+        );
+      }
+    );
   }
+
   /* fist page  */
   if (pagesStates.currentPage === 1) {
-    pageBtns = range(pagesStates.currentPage + 1, allPages).map(
+    pageBtns = arrayCreator(pagesStates.currentPage + 1, allPages).map(
       (item, index) => {
         return (
           <Button key={index} onClick={changePage} className={btnClassNames}>
@@ -114,7 +110,7 @@ const Pagination = props => {
       }
     );
   } else {
-    pageBtns = range(1, allPages).map((item, index) => {
+    pageBtns = arrayCreator(1, allPages).map((item, index) => {
       return (
         <Button key={index} onClick={changePage} className={btnClassNames}>
           {item}

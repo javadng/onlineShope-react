@@ -1,9 +1,12 @@
+import { useSelector } from 'react-redux';
 import Button from '../UI/Button';
 import Coupon from './Coupon';
 import OrderList from './OrderList';
 import classes from './orderSection.module.scss';
 
 const OrderSection = props => {
+  const { totalPrice } = useSelector(state => state.cart);
+
   return (
     <div className={classes.order}>
       <Coupon />
@@ -15,7 +18,7 @@ const OrderSection = props => {
       <OrderList />
       <div className={classes.totalOrder}>
         <span>Total Order :</span>
-        <span className={classes.price}>$ 999</span>
+        <span className={classes.price}>$ {totalPrice}</span>
       </div>
       <Button className={classes.order__btn}>Place order</Button>
     </div>

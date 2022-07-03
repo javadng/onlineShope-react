@@ -1,11 +1,11 @@
-import SideBar from '../Components/blog/singleBlog/SideBar';
+import SideBar from '../Components/blog/blogPage/SideBar';
 import Main from '../Components/Layouts/Main';
 import ContainerGrid from '../Components/UI/ContainerGrid';
 
 import Banner from '../Components/Layouts/Header/Banner';
 
 import classes from './Blogs.module.scss';
-import BlogList from '../Components/blog/singleBlog/BlogList';
+import BlogList from '../Components/blog/blogPage/BlogList';
 
 const Blogs = props => {
   return (
