@@ -13,8 +13,9 @@ const OrderItem = props => {
         id={props.id}
         name={props.name}
         price={props.price}
+        quantity={props.number}
       />
-      <span className={classes.price}>${props.price}</span>
+      <span className={classes.price}>${props.totalPrice}</span>
     </li>
   );
 };

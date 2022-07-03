@@ -19,7 +19,7 @@
   &__btn {
     text-transform: uppercase;
     background-color: $blue-light;
-    color: #fff;
+    color: #fff !important;
     padding: 1rem 2.5rem;
 
     @media only screen and (max-width: $bp-xs) {
@@ -39,7 +39,7 @@
 
     .title {
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.1s;
 
       &:hover {
         color: $blue-light;

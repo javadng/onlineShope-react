@@ -1,4 +1,4 @@
-import Button from '../../UI/Button';
+import { Link } from 'react-router-dom';
 import classes from './BlogItem.module.scss';
 
 const BlogItem = props => {
@@ -17,14 +17,16 @@ const BlogItem = props => {
       </figure>
       <header>
         <h2 className={classes.title}>
-          <span>{props.title}</span>
+          <Link to={`/blog/${props.id}`}>{props.title}</Link>
         </h2>
       </header>
       <article>
         <p>{props.desc}</p>
       </article>
       <footer>
-        <Button className={btnClasses}>READ more</Button>
+        <Link to={`/blog/${props.id}`} className={btnClasses}>
+          READ more
+        </Link>
       </footer>
     </div>
   );

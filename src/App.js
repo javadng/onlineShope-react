@@ -7,6 +7,15 @@ import { Route, Routes } from 'react-router-dom';
 import Tooltip from './Components/UI/tooltip/Tooltip';
 import Home from './pages/Home';
 import Spinner from './Components/UI/spinners/Spinner';
+import SingleBlog from './pages/SingleBlog';
+
+/*  */
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons';
+
+library.add(fas, faTwitter, faFontAwesome);
 
 const Blogs = React.lazy(() => import('./pages/Blogs'));
 const Checkout = React.lazy(() => import('./pages/Checkout'));
@@ -33,6 +42,7 @@ const App = () => {
         <Route path="/*" element={<Home />} />
         <Route path="/home/*" element={<Home />} />
         <Route path="/:productId" element={<SingleProduct />} />
+        <Route path="/blog/:blogId" element={<SingleBlog />} />
         <Route path="/blog" element={<Blogs />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/contact-us" element={<ContactUs />} />

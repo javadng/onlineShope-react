@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import Button from '../UI/Button';
 import Modal from '../UI/Modal/Modal';
 import CartItem from './CartItem';
-import imageP from '../../assets/img/photo-1.jpg';
 import { NavLink } from 'react-router-dom';
 
 const Cart = props => {
@@ -18,7 +17,7 @@ const Cart = props => {
       totalPrice={item.totalPrice}
       id={item.id}
       price={item.price}
-      img={imageP}
+      img={item.image}
       name={item.name}
     />
   ));
@@ -33,8 +32,14 @@ const Cart = props => {
       {modalContent || (
         <p className="center-text fs-2 warning-color">No Item Add some..</p>
       )}
-      <Button className={classes.modal__btn}>$ {totalPrice}</Button>
-      <NavLink to='/checkout' className={`${classes.modal__btn} btn`}>Shopping</NavLink>
+      <footer className={classes.cartFooter}>
+        <Button className={classes.modal__btn}>
+          totalPrice : $ {totalPrice}
+        </Button>
+        <NavLink to="/checkout" className={`${classes.modal__btn} btn`}>
+          Shopping
+        </NavLink>
+      </footer>
     </Modal>
   );
 };

@@ -1,13 +1,13 @@
 @import '../../../Sass/variables';
 
 .modal {
-  background-color: #eee;
+  background-color: #fff;
 
   position: fixed;
   z-index: 1500;
   padding: 4rem 0;
-  max-width: 1000px;
-  width: 80%;
+  max-width: 500px;
+  width: 50%;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -19,7 +19,7 @@
   animation: slide-down 300ms ease-out forwards;
 
   &__title {
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     margin: 1rem 0 4rem;
   }

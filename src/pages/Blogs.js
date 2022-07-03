@@ -1,25 +1,15 @@
 import SideBar from '../Components/blog/blogPage/SideBar';
-import Main from '../Components/Layouts/Main';
-import ContainerGrid from '../Components/UI/ContainerGrid';
-
-import Banner from '../Components/Layouts/Header/Banner';
+import BlogList from '../Components/blog/blogPage/BlogList';
+import BlogLayout from '../Components/blog/layout-blog/BlogLayout';
 
 import classes from './Blogs.module.scss';
-import BlogList from '../Components/blog/blogPage/BlogList';
 
 const Blogs = props => {
   return (
-    <Main>
-      <Banner
-        subTitle="Blog Posts"
-        title="Some Post"
-        desc="Responsive React.js WebApp"
-      />
-      <ContainerGrid className={classes.blogs}>
-        <SideBar className={classes.side} />
-        <BlogList className={classes.contents} />
-      </ContainerGrid>
-    </Main>
+    <BlogLayout className={classes.blogs}>
+      <SideBar className={classes.side} />
+      <BlogList className={classes.contents} />
+    </BlogLayout>
   );
 };
 

@@ -4,12 +4,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(8, 5rem);
-  grid-gap: 2.5rem 1rem;
+  grid-gap:  1rem;
   background-color: #fff;
   font-size: 3rem;
   text-align: center;
   padding-bottom: 2rem;
   border-radius: 1rem;
+  position: relative;
   overflow: hidden;
   box-shadow: 0 2px 0.6rem rgba($color: #000000, $alpha: 0.1);
   transition: all 0.2s ease-out;
@@ -20,7 +21,6 @@
 
   &:hover > &__img::after {
     height: 100%;
-    // background-color: rgba($color: #e6e6e6, $alpha: 0.5);
     background-color: rgba(0, 0, 0, 0.5);
   }
 
@@ -62,12 +62,10 @@
     margin: 0 auto;
     line-height: 2;
     border-radius: 1rem;
-    background: #800080;
-    color: #fff !important;
-    
+
     &:hover {
       transform: scale(1.1);
-      background-color: #7e467e;
+      color: $royalBlue;
     }
   }
 
@@ -105,7 +103,8 @@
   }
 
   .price {
-    font-size: 5rem;
+    font-size: 4rem;
+    color: $royalBlue;
     font-weight: bold;
     grid-row: 7 /8;
     grid-column: 1 / -1;
@@ -119,9 +118,9 @@
     margin: 0 auto;
     transform: translateY(-1rem);
 
-    border: 1px solid $royalred;
     transition: all 0.2s;
-    background-color: #fff;
+    background-color: $royalBlue;
+    color: #fff;
     box-shadow: none;
     font-size: 2rem;
     font-weight: bold;
@@ -130,5 +129,28 @@
       color: #fff;
       background-color: $royalred;
     }
+
+    .btnText {
+      margin: 0 1rem;
+    }
   }
 }
+
+// .bookmark {
+//   position: absolute;
+//   right: 4px;
+//   top: 2px;
+//   z-index: 200;
+//   color: #fff;
+//   cursor: pointer;
+//   transition: all 0.3s;
+//   font-size: 5rem;
+
+//   &:hover {
+//     color: #ccc;
+//   }
+// }
+// .isBookmarked,
+// .isBookmarked:hover {
+//   color: $light-green;
+// }

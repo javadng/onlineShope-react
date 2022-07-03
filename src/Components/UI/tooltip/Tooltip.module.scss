@@ -23,6 +23,14 @@
     left: 0;
     bottom: 0;
   }
+
+  .message {
+  }
+
+  .close {
+    margin-right: 2rem;
+    cursor: pointer;
+  }
 }
 
 @keyframes slide-left {

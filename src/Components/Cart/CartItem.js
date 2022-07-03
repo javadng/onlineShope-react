@@ -6,20 +6,21 @@ const CartItem = props => {
 
   return (
     <li className={classes.productcart}>
-      <figure className={classes.img__holder}>
-        <img alt="" src={img} />
-      </figure>
       <div className={classes.product__detail}>
         <span className={classes.product__name}>{name}</span>
-        <span>Price: {price.toFixed(2)} $</span>
-        <span>Total: {totalPrice.toFixed(2)} $</span>
+        <span>{totalPrice.toFixed(2)} $</span>
       </div>
-      <InputChangeNumber
-        price={price}
-        id={id}
-        name={name}
-        quantity={quantity}
-      />
+      <figure className={classes.img__holder}>
+        <img alt={name} src={img} />
+        <figcaption>
+          <InputChangeNumber
+            price={price}
+            id={id}
+            name={name}
+            quantity={quantity}
+          />
+        </figcaption>
+      </figure>
     </li>
   );
 };

@@ -21,6 +21,7 @@ const ProductItem = props => {
         id,
         name,
         price,
+        image: props.img,
       })
     );
 
@@ -48,7 +49,8 @@ const ProductItem = props => {
       <p className={classes['productitem--desc']}>{description}</p>
       <span className={classes.price}>${price.toFixed(2)}</span>
       <Button className={classes.addbtn} onClick={addToCartHandler}>
-        Add to Cart
+        <span className={classes.btnText}>Add to Cart</span>
+        <FontAwesomeIcon icon={solid('shopping-cart')} />
       </Button>
     </div>
   );

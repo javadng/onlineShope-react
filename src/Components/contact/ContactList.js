@@ -5,9 +5,9 @@ const ContactList = props => {
   return (
     <div className={classes.contactList}>
       <ContactCart
-        title="help & support"
-        desc="Our support team is spread across the globe to give you answers fast"
-        btnText="visit support Page"
+        title="sales"
+        desc="Get in touch with our sales team to see how we can work together."
+        btnText="contact sales"
       />
       <ContactCart
         isCentered={true}
@@ -16,9 +16,9 @@ const ContactList = props => {
         btnText="visit support Page"
       />
       <ContactCart
-        title="help & support"
-        desc="Our support team is spread across the globe to give you answers fast"
-        btnText="visit support Page"
+        title="press"
+        desc="Are you interested in our latest news or working on a  Grammarly story an need to get in touch ?s"
+        btnText="visit press Page"
       />
     </div>
   );

@@ -14,7 +14,9 @@ const OrderList = props => {
           id={item.id}
           name={item.name}
           number={item.quantity}
-          price={item.totalPrice}
+          totalPrice={item.totalPrice}
+          price={item.price}
+          quantity={item.quantity}
         />
       ))}
     </ul>

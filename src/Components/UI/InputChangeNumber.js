@@ -1,3 +1,5 @@
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
 import { uiActions } from '../../store/ui-slice';
@@ -5,7 +7,7 @@ import { uiActions } from '../../store/ui-slice';
 import classes from './InputChangeNumber.module.scss';
 
 const InputChangeNumber = props => {
-  const customClasses = `${props.className} ${classes.number__procut}`;
+  const customClasses = `${props.className || ''} ${classes.number__procut}`;
   const { id, quantity, name, price } = props;
 
   const dispatch = useDispatch();
@@ -16,6 +18,7 @@ const InputChangeNumber = props => {
         id,
         name,
         price,
+        quantity,
       })
     );
 
@@ -33,9 +36,18 @@ const InputChangeNumber = props => {
   };
   return (
     <div className={customClasses}>
-      <span className={classes.decrease} onClick={decreaseHandler}>
-        -
-      </span>
+      {quantity === 1 && (
+        <FontAwesomeIcon
+          className={classes.trash}
+          icon={solid('trash')}
+          onClick={decreaseHandler}
+        />
+      )}
+      {quantity > 1 && (
+        <span className={classes.decrease} onClick={decreaseHandler}>
+          -
+        </span>
+      )}
       <input type="number" min="0" placeholder={quantity} />
       <span className={classes.increase} onClick={increaseHandler}>
         +
