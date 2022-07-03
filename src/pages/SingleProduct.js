@@ -1,10 +1,3 @@
-import subimg2 from '../assets/img/photo-2.jpg';
-import subimg3 from '../assets/img/photo-3.jpg';
-import subimg4 from '../assets/img/photo-4.jpg';
-import subimg5 from '../assets/img/photo-5.jpg';
-import subimg6 from '../assets/img/photo-6.jpg';
-import originalPic from '../assets/img/photo-1.jpg';
-
 import Main from '../Components/Layouts/Main';
 
 import classes from './singlepage.module.scss';
@@ -15,17 +8,17 @@ import SectionTitle from '../Components/UI/SectionTitle';
 
 const productInfo = {
   id: 'p3',
-  name: 'Amazing Shoes! :)',
+  name: 'Amazing Shoes!',
   price: 100,
   quantity: 1,
-  baseImgUrl: originalPic,
+  baseImgUrl: 'https://s6.uupload.ir/files/photo-1_aum5.jpg',
   subImgsUrl: [
-    { img: originalPic, id: 'img1' },
-    { img: subimg2, id: 'img2' },
-    { img: subimg3, id: 'img3' },
-    { img: subimg4, id: 'img4' },
-    { img: subimg5, id: 'img5' },
-    { img: subimg6, id: 'img6' },
+    { img: 'https://s6.uupload.ir/files/photo-1_aum5.jpg', id: 'img1' },
+    { img: 'https://s6.uupload.ir/files/photo-6_4oe4.jpg', id: 'img2' },
+    { img: 'https://s6.uupload.ir/files/photo-5_bzyr.jpg', id: 'img3' },
+    { img: 'https://s6.uupload.ir/files/photo-4_rx0r.jpg', id: 'img4' },
+    { img: 'https://s6.uupload.ir/files/photo-3_6332.jpg', id: 'img5' },
+    { img: 'https://s6.uupload.ir/files/photo-2_vkrs.jpg', id: 'img6' },
   ],
   description:
     'Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.',
@@ -38,7 +31,6 @@ const productInfo = {
 };
 
 const SingleProduct = props => {
-  // const { id, name, quantity, price } = props;
   return (
     <Main>
       <div className={classes.single__product}>
