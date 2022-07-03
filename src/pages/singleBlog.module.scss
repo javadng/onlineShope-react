@@ -26,37 +26,6 @@
   text-align: justify;
 }
 
-.icons {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  padding: 2rem;
-  font-size: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  svg {
-    cursor: pointer;
-  }
-
-  .linkedin {
-    color: #3e91c5;
-  }
-
-  .google {
-    color: #dd4b39;
-  }
-
-  .twitter {
-    color: #1da1f2;
-  }
-
-  .facebook {
-    color: #3b5998;
-  }
-}
-
 .relatedTags {
   padding: 2rem;
   border: 1px solid #eee;

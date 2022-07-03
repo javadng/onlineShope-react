@@ -1,5 +1,5 @@
 import classes from './BlogItem.module.scss';
-import Button from '../UI/Button';
+import { Link } from 'react-router-dom';
 
 const BlogItem = props => {
   return (
@@ -11,7 +11,9 @@ const BlogItem = props => {
       <div className={classes.blogitem__desc}>
         <span className={classes.blogitem__cat}>{props.categories}</span>
         <h2 className={classes.blogitem__title}>{props.title}</h2>
-        <Button className={classes.blogitem__btn}>Read more</Button>
+        <Link to={`/blog/${props.id}`} className={classes.blogitem__btn}>
+          Read more
+        </Link>
       </div>
     </div>
   );

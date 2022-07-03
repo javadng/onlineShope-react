@@ -3,8 +3,13 @@ import ContainerGrid from '../../UI/ContainerGrid';
 import Banner from '../../Layouts/Header/Banner';
 
 import classes from './BlogLayout.module.scss';
+import { useEffect } from 'react';
 
 const BlogLayout = props => {
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: '0px' });
+  }, []);
+  
   return (
     <Main>
       <Banner

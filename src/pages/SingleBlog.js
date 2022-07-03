@@ -5,7 +5,8 @@ import imageBlog from '../assets/img/blog-1.jpg';
 
 import classes from './singleBlog.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { brands, solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import SocialIcons from '../Components/UI/SocialIcons';
 
 const DUMMY__BLOG = {
   id: 'b1',
@@ -27,26 +28,8 @@ const SingleBlog = props => {
         <article className={classes.blogtext}>
           <p>{DUMMY__BLOG.blogText}</p>
         </article>
+        <SocialIcons />
         <footer>
-          <div className={classes.icons}>
-            <FontAwesomeIcon icon={solid('share-alt')} />
-            <FontAwesomeIcon
-              className={classes.facebook}
-              icon={brands('facebook')}
-            />
-            <FontAwesomeIcon
-              className={classes.twitter}
-              icon={brands('twitter')}
-            />
-            <FontAwesomeIcon
-              className={classes.google}
-              icon={brands('google-plus')}
-            />
-            <FontAwesomeIcon
-              className={classes.linkedin}
-              icon={brands('linkedin')}
-            />
-          </div>
           <div className={classes.relatedTags}>
             <FontAwesomeIcon className={classes.tagicon} icon={solid('tags')} />
             <a href="/home">LG</a>
