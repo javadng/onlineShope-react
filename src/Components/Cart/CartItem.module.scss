@@ -3,7 +3,7 @@
 .productcart {
   display: grid;
   grid-template-columns: minmax(max-content, 20rem) minmax(15rem, 18rem);
-  grid-template-rows: repeat(2, 14rem);
+  grid-template-rows: repeat(2, 7rem);
   align-content: flex-end;
   font-size: 2rem;
   background-color: #fff;
@@ -12,10 +12,9 @@
   justify-items: center;
   align-items: center;
   width: 80%;
-  margin: 0 auto;
-  padding-right: 1rem;
+  margin: 1rem auto;
   justify-content: end;
-  border-bottom: 1px solid #eee;
+  border: 1px solid #eee;
 
   @media only screen and (max-width: $bp-xs) {
     grid-template-columns: 1fr;
@@ -41,6 +40,9 @@
   }
 }
 
+.changeInput {
+  border: none;
+}
 .product__detail {
   display: flex;
   flex-direction: column;

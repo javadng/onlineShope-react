@@ -18,7 +18,7 @@ const OrderSection = props => {
       <OrderList />
       <div className={classes.totalOrder}>
         <span>Total Order :</span>
-        <span className={classes.price}>$ {totalPrice}</span>
+        <span className={classes.price}>$ {totalPrice.toFixed(2)}</span>
       </div>
       <Button className={classes.order__btn}>Place order</Button>
     </div>

@@ -1,67 +1,52 @@
 import ProductItem from './ProductItem';
 
 import GridList from '../UI/GridList';
+import { useSelector } from 'react-redux';
+import Spinner from '../UI/spinners/Spinner';
+import Overlay from '../UI/Modal/Overlay';
+import { Fragment } from 'react';
 
-const allProducts = [
-  {
-    id: 'p1',
-    name: 'New Balance',
-    price: 5,
-    description: '237 Sneaker - Men',
-    imgUrl: 'https://s6.uupload.ir/files/001_yu9j.jpg',
-  },
-  {
-    id: 'p2',
-    name: 'adidas',
-    price: 10,
-    imgUrl: 'https://s6.uupload.ir/files/002_uf6h.jpg',
-    description: 'Hoops 3.0 High-Top Sneak',
-  },
-  {
-    id: 'p3',
-    name: 'New Balance',
-    price: 100,
-    imgUrl: 'https://s6.uupload.ir/files/003_b92b.jpg',
-    description: '300 Court Sneaker - Men - amazing!',
-  },
-  {
-    id: 'p4',
-    name: 'adidas',
-    price: 5,
-    description: 'Grand Court Alpha Sneaker',
-    imgUrl: 'https://s6.uupload.ir/files/004_z8ze.jpg',
-  },
-  {
-    id: 'p5',
-    name: 'Vans',
-    price: 5,
-    description: 'Asher Slip-On Sneaker - amazing!',
-    imgUrl: 'https://s6.uupload.ir/files/005_8h56.jpg',
-  },
-  {
-    id: 'p6',
-    name: 'Crocs',
-    price: 5,
-    description: 'Brooklyn Wedge Sandal - amazing!',
-    imgUrl: 'https://s6.uupload.ir/files/006_0ndg.jpg',
-  },
-];
+import classes from './ProductLists.module.scss';
 
 const ProductList = props => {
-  return (
-    <GridList className={props.className}>
-      {allProducts.map(product => (
-        <ProductItem
-          key={product.id}
-          img={product.imgUrl}
-          id={product.id}
-          name={product.name}
-          price={product.price}
-          description={product.description}
-        />
-      ))}
-    </GridList>
-  );
+  const { products } = useSelector(state => state.products);
+  const { notification } = useSelector(state => state.UI);
+
+  let productContent;
+
+  if (notification?.status === 'LOADING') {
+    productContent = (
+      <Fragment>
+        <Spinner />
+        <Overlay />
+      </Fragment>
+    );
+  }
+
+  if (products.length === 0) {
+    productContent = (
+      <Fragment>
+        <p className="center-text fs-5 warning-color">
+          {notification?.message}
+        </p>
+      </Fragment>
+    );
+  }
+
+  if (products && products.length > 0) {
+    productContent = products.map(product => (
+      <ProductItem
+        key={product.id}
+        img={product.imgUrl}
+        id={product.id}
+        name={product.name}
+        price={product.price}
+        description={product.description}
+      />
+    ));
+  }
+
+  return <GridList className={classes.list}>{productContent}</GridList>;
 };
 
 export default ProductList;

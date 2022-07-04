@@ -8,7 +8,7 @@ import { uiActions } from '../../store/ui-slice';
 import { Link } from 'react-router-dom';
 
 import Button from '../UI/Button';
-import classes from './ProductItem.module.scss';
+import './ProductItem.scss';
 
 const ProductItem = props => {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const ProductItem = props => {
 
     dispatch(
       uiActions.showNotification({
-        status: 'success',
+        status: 'ADD_ITEM',
         titile: '',
         message: 'Item Added to cart',
       })
@@ -35,21 +35,21 @@ const ProductItem = props => {
   };
 
   return (
-    <div className={classes.productitem}>
-      <figure className={classes.productitem__img}>
+    <div className="productitem">
+      <figure className="productitem__img">
         <img src={props.img} alt="product item" />
-        <div className={classes.productitem__icons}>
+        <div className="productitem__icons">
           <FontAwesomeIcon icon={solid('heart')} color="red" />
           <FontAwesomeIcon icon={solid('user-circle')} color="#fff" />
         </div>
       </figure>
-      <Link to={`/${id}`} className={classes['productitem--title']}>
+      <Link to={`/${id}`} className="productitem--title">
         {name} &rarr;
       </Link>
-      <p className={classes['productitem--desc']}>{description}</p>
-      <span className={classes.price}>${price.toFixed(2)}</span>
-      <Button className={classes.addbtn} onClick={addToCartHandler}>
-        <span className={classes.btnText}>Add to Cart</span>
+      <p className="productitem--desc">{description}</p>
+      <span className="price">${price.toFixed(2)}</span>
+      <Button className="addbtn" onClick={addToCartHandler}>
+        <span className="btnText">Add to Cart</span>
         <FontAwesomeIcon icon={solid('shopping-cart')} />
       </Button>
     </div>

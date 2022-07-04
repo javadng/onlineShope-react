@@ -33,6 +33,10 @@
   }
 }
 
+.error {
+  background-color: $royalred;
+}
+
 @keyframes slide-left {
   from {
     opacity: 0;

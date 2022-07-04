@@ -10,10 +10,14 @@ const tooltipElem = document.getElementById('tooltip');
 const Tooltip = props => {
   const dispatch = useDispatch();
 
+  const tooltipClasses = `${classes.tooltip} ${
+    props.status === 'ERROR' ? classes.error : ''
+  }`;
+
   return (
     <Fragment>
       {reactdom.createPortal(
-        <div className={classes.tooltip}>
+        <div className={tooltipClasses}>
           <FontAwesomeIcon
             className={classes.close}
             icon={solid('close')}

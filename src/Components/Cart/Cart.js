@@ -34,7 +34,7 @@ const Cart = props => {
       )}
       <footer className={classes.cartFooter}>
         <span className={`btn ${classes.totalPrice}`}>
-          totalPrice : $ {totalPrice}
+          totalPrice : $ {totalPrice.toFixed(2)}
         </span>
         <NavLink to="/checkout" className={`${classes.modal__btn} btn`}>
           Shopping &rarr;

@@ -17,6 +17,7 @@ const OrderList = props => {
           totalPrice={item.totalPrice}
           price={item.price}
           quantity={item.quantity}
+          image={item.image}
         />
       ))}
     </ul>

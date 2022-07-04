@@ -24,7 +24,7 @@ const InputChangeNumber = props => {
 
     dispatch(
       uiActions.showNotification({
-        status: 'success',
+        status: 'ADD_ITEM',
         titile: '',
         message: 'Item Added to cart',
       })

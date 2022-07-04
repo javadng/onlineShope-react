@@ -6,8 +6,12 @@ const OrderItem = props => {
 
   return (
     <li className={classNames}>
-      <span className={classes.name}>{props.name}</span>
-      {props.number && <span className={classes.number}>x {props.number}</span>}
+      <figure className={classes.item__img}>
+        <img src={props.image} alt={props.name} />
+      </figure>
+      <span className={classes.name}>
+        {props.name} x {props.number}
+      </span>
       <InputChangeNumber
         className={classes.changeNum}
         id={props.id}
@@ -15,7 +19,7 @@ const OrderItem = props => {
         price={props.price}
         quantity={props.number}
       />
-      <span className={classes.price}>${props.totalPrice}</span>
+      <span className={classes.price}>${props.totalPrice.toFixed(2)}</span>
     </li>
   );
 };

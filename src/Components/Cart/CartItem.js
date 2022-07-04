@@ -12,15 +12,14 @@ const CartItem = props => {
       </div>
       <figure className={classes.img__holder}>
         <img alt={name} src={img} />
-        <figcaption>
-          <InputChangeNumber
-            price={price}
-            id={id}
-            name={name}
-            quantity={quantity}
-          />
-        </figcaption>
       </figure>
+      <InputChangeNumber
+        price={price}
+        id={id}
+        name={name}
+        quantity={quantity}
+        className={classes.changeInput}
+      />
     </li>
   );
 };

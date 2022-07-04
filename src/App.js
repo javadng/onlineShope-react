@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { uiActions } from './store/ui-slice';
@@ -14,6 +14,7 @@ import SingleBlog from './pages/SingleBlog';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons';
+import { getProducts } from './store/cart-actions';
 
 library.add(fas, faTwitter, faFontAwesome);
 
@@ -29,7 +30,12 @@ const App = () => {
   const uiSlice = useSelector(state => state.UI);
   const { notification } = uiSlice;
 
-  if (notification) {
+  // console.log(notification);
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
+
+  if (notification?.status === 'ADD_ITEM') {
     setTimeout(() => {
       dispatch(uiActions.closeTooltip());
     }, 3000);
@@ -37,7 +43,12 @@ const App = () => {
 
   return (
     <Suspense fallback={<Spinner />}>
-      {notification && <Tooltip message={notification.message} />}
+      {notification?.status === 'ADD_ITEM' && (
+        <Tooltip message={notification.message} status={notification.status} />
+      )}
+      {notification?.status === 'ERROR' && (
+        <Tooltip message={notification.message} status={notification.status} />
+      )}
       <Routes>
         <Route path="/*" element={<Home />} />
         <Route path="/home/*" element={<Home />} />
