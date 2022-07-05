@@ -1,31 +1,17 @@
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import Pagination from '../pagination/Pagination';
 import GridList from '../UI/GridList';
 import BlogItem from './BlogItem';
-
-const DUMMY__Blog = [
-  {
-    id: 'b1',
-    date: { day: '22', month: 'aug' },
-    title: 'A simple blog post: creative design',
-    categories: 'Your categories',
-  },
-  {
-    id: 'b2',
-    date: { day: '2', month: 'aug' },
-    title: 'A simple blog post: creative design',
-    categories: 'Your categories',
-  },
-  {
-    id: 'b3',
-    date: { day: '22', month: 'Jun' },
-    title: 'A simple blog post: creative design',
-    categories: 'Your categories',
-  },
-];
+import classes from './BlogList.module.scss';
 
 const BlogList = props => {
+  const { homeBlog } = useSelector(state => state.blogsHome);
+  const [blogsHomeState, setBlogsHome] = useState(homeBlog);
+
   return (
     <GridList>
-      {DUMMY__Blog.map(item => (
+      {blogsHomeState.map(item => (
         <BlogItem
           key={item.id}
           id={item.id}
@@ -34,6 +20,11 @@ const BlogList = props => {
           categories={item.categories}
         />
       ))}
+      <Pagination
+        className={classes.PaginationBtn}
+        setPostsState={setBlogsHome}
+        allPosts={homeBlog}
+      />
     </GridList>
   );
 };

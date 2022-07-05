@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../../store/cart-slice';
 import { uiActions } from '../../../store/ui-slice';
@@ -12,6 +12,10 @@ const ProductDetail = props => {
   const containerClasses = `${props.className} ${classes.product__container}`;
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: '0px' });
+  }, []);
+
   const {
     id,
     AdditionalInfo,
@@ -24,6 +28,8 @@ const ProductDetail = props => {
     viewsInfo,
     quantity,
   } = props.productDetail;
+
+  // const productInfo = props.productDetail;
 
   const [imgUrlState, setImgUrlState] = useState(baseImgUrl);
 

@@ -35,6 +35,10 @@ const reducerFunction = (state, action) => {
 };
 
 const Pagination = props => {
+  const PaginationClasses = `${classes.pageBtns} ${props.className || ''}`;
+  const btnClassNames = `${classes.btn}`;
+  let pageBtns;
+
   const [pagesStates, dispatchPages] = useReducer(
     reducerFunction,
     initialState
@@ -68,8 +72,6 @@ const Pagination = props => {
     );
 
     setPostsState(postsArray);
-
-    window.scrollTo({ behavior: 'smooth', top: '0px' });
   }, [
     pagesStates.currentPage,
     pagesStates.postPerPage,
@@ -81,9 +83,6 @@ const Pagination = props => {
   //   const limitPagination = allPages >= pageLimit ? pageLimit : allPages;
   //   return range(currPage, limitPagination);
   // };
-
-  let pageBtns;
-  const btnClassNames = `${classes.btn}`;
 
   /* last page =>  */
   if (pagesStates.currentPage === allPages) {
@@ -120,7 +119,7 @@ const Pagination = props => {
   }
 
   return (
-    <div className={classes.pageBtns}>
+    <div className={PaginationClasses}>
       {pagesStates.currentPage !== 1 && (
         <Button onClick={goToPrevPage} className={btnClassNames}>
           &larr;

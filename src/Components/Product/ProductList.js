@@ -8,7 +8,7 @@ import { Fragment } from 'react';
 
 import classes from './ProductLists.module.scss';
 
-const ProductList = props => {
+const   ProductList = props => {
   const { products } = useSelector(state => state.products);
   const { notification } = useSelector(state => state.UI);
 

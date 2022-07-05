@@ -6,7 +6,7 @@ import imgBlog3 from '../../../assets/img/blog-3.jpg';
 
 import classes from './blogList.module.scss';
 import Pagination from '../../pagination/Pagination';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const DUMMY__Blog = [
   {
@@ -86,6 +86,10 @@ const DUMMY__Blog = [
 const BlogList = props => {
   const [posts, setPosts] = useState([]);
 
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: '0px' });
+  }, [posts]);
+  
   return (
     <ul className={classes.list}>
       {posts.map(item => (

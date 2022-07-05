@@ -6,37 +6,35 @@ import ProductRelated from '../Components/Product/SingleProduct/ProductRelated';
 import ProductList from '../Components/Product/ProductList';
 import SectionTitle from '../Components/UI/SectionTitle';
 
-const productInfo = {
-  id: 'p3',
-  name: 'Amazing Shoes!',
-  price: 100,
-  quantity: 1,
-  baseImgUrl: 'https://s6.uupload.ir/files/photo-1_aum5.jpg',
-  subImgsUrl: [
-    { img: 'https://s6.uupload.ir/files/photo-1_aum5.jpg', id: 'img1' },
-    { img: 'https://s6.uupload.ir/files/photo-6_4oe4.jpg', id: 'img2' },
-    { img: 'https://s6.uupload.ir/files/photo-5_bzyr.jpg', id: 'img3' },
-    { img: 'https://s6.uupload.ir/files/photo-4_rx0r.jpg', id: 'img4' },
-    { img: 'https://s6.uupload.ir/files/photo-3_6332.jpg', id: 'img5' },
-    { img: 'https://s6.uupload.ir/files/photo-2_vkrs.jpg', id: 'img6' },
-  ],
-  description:
-    'Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.',
-  AdditionalInfo: 'Some Text... (Additional)',
-  reviews: ['reviews'],
-  viewsInfo: {
-    commentsNumber: 4,
-    viewsNumber: 21,
-  },
-};
+import useHttp from '../hooks/use-http';
+import { getSingleProduct } from '../lib/getSingleProduct';
+import { Fragment, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { uiActions } from '../store/ui-slice';
+import Spinner from '../Components/UI/spinners/Spinner';
+import Overlay from '../Components/UI/Modal/Overlay';
 
 const SingleProduct = props => {
-  return (
-    <Main>
+  const params = useParams();
+  const [sendRequestFn, productData] = useHttp(getSingleProduct);
+  // const { notification } = useSelector(state => state.UI);
+
+  useEffect(() => {
+    sendRequestFn(params.productId);
+  }, [sendRequestFn, params.productId]);
+
+  uiActions.showNotification({
+    status: productData.status,
+  });
+
+  let pageContent;
+
+  if (productData.status === 'SUCCESS') {
+    pageContent = (
       <div className={classes.single__product}>
         <ProductRelated className={classes.related} />
         <ProductDetail
-          productDetail={productInfo}
+          productDetail={productData.data}
           className={classes.detaile}
         />
         <SectionTitle
@@ -46,8 +44,18 @@ const SingleProduct = props => {
         />
         <ProductList className={classes.newProducts} />
       </div>
-    </Main>
-  );
+    );
+  } else {
+    // } if (notification?.status === 'LOADING') {
+    pageContent = (
+      <Fragment>
+        <Spinner />
+        <Overlay />
+      </Fragment>
+    );
+  }
+
+  return <Main>{pageContent}</Main>;
 };
 
 export default SingleProduct;

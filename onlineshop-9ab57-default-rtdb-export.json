@@ -1,0 +1,214 @@
+{
+  "BlogsHome": {
+    "blog1": {
+      "day": 22,
+      "description": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet.",
+      "month": "Aug",
+      "title": "Choose a CMS and set up your blog"
+    },
+    "blog2": {
+      "day": 10,
+      "description": "Blog posts allow you and your business to publish insights, thoughts, and stories on your website about any topic. They can help you boost brand awareness, credibility, conversions, and revenue. Most importantly, they can help you drive traffic to your website.",
+      "month": "June",
+      "title": "Create your blog fasest domain"
+    },
+    "blog3": {
+      "day": 2,
+      "description": "For instance, if your readers are millennials looking to start a business, you probably dont need to provide them with information about getting started on social media — most of them already have that down.",
+      "month": "Aug",
+      "title": "How to make a responsive web app"
+    },
+    "blog4": {
+      "day": 22,
+      "description": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet.",
+      "month": "Aug",
+      "title": "Choose a CMS and set up your blog"
+    },
+    "blog5": {
+      "day": 22,
+      "description": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet.",
+      "month": "Aug",
+      "title": "Choose a CMS and set up your blog"
+    },
+    "blog6": {
+      "day": 22,
+      "description": "Blog posts allow you and your business to publish insights, thoughts, and stories on your website about any topic. They can help you boost brand awareness, credibility, conversions, and revenue. Most importantly, they can help you drive traffic to your website.",
+      "month": "June",
+      "title": "Create your blog fasest domain"
+    }
+  },
+  "products": {
+    "p1": {
+      "description": "237 Sneaker - Men's",
+      "image_url": "https://s6.uupload.ir/files/001_yu9j.jpg",
+      "name": "New Balance",
+      "price": 15
+    },
+    "p2": {
+      "description": "Hoops 3.0 High-Top Sneak",
+      "image_url": "https://s6.uupload.ir/files/002_uf6h.jpg",
+      "name": "adidas",
+      "price": 22.99
+    },
+    "p3": {
+      "description": "300 Court Sneaker - Men - amazing!",
+      "image_url": "https://s6.uupload.ir/files/photo-1_h2to.jpg",
+      "name": "New Balance",
+      "price": 99.98
+    },
+    "p4": {
+      "description": "Grand Court Alpha Sneaker",
+      "image_url": "https://s6.uupload.ir/files/004_z8ze.jpg",
+      "name": "adidas",
+      "price": 22.98
+    },
+    "p5": {
+      "description": "Asher Slip-On Sneaker - amazing!",
+      "image_url": "https://s6.uupload.ir/files/005_8h56.jpg",
+      "name": "Vans",
+      "price": 132.22
+    },
+    "p6": {
+      "description": "Brooklyn Wedge Sandal - amazing!",
+      "image_url": "https://s6.uupload.ir/files/006_0ndg.jpg",
+      "name": "Crocs",
+      "price": 59.35
+    }
+  },
+  "singlProducts": {
+    "p1": {
+      "AdditionalInfo": "Some Text... (Additional)'",
+      "baseImgUrl": "https://s6.uupload.ir/files/001_yu9j.jpg",
+      "description": "Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.',   AdditionalInfo: 'Some Text... (Additional)",
+      "id": "KRrLGWmhd5",
+      "name": "237 Sneaker - Men's",
+      "price": 15,
+      "quantity": 1,
+      "reviews": {
+        "javad": ""
+      },
+      "subImgsUrl": [
+        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
+        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
+        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
+        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
+        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
+      ],
+      "viewsInfo": {
+        "commentsNumber": 3,
+        "viewsNumber": 24
+      }
+    },
+    "p2": {
+      "AdditionalInfo": "This is test...",
+      "baseImgUrl": "https://s6.uupload.ir/files/002_uf6h.jpg",
+      "description": " Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.', AdditionalInfo: 'Some Text... (Additional)",
+      "id": "BPzCgwO1z2",
+      "name": "Adidas",
+      "price": 22.99,
+      "quantity": 1,
+      "reviews": "\"\"",
+      "subImgsUrl": [
+        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
+        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
+        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
+        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
+        { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
+      ],
+      "viewsInfo": {
+        "commentsNumber": 4,
+        "viewsNumber": 36
+      }
+    },
+    "p3": {
+      "AdditionalInfo": "This is test...",
+      "baseImgUrl": "https://s6.uupload.ir/files/photo-1_h2to.jpg",
+      "description": "Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.', AdditionalInfo: 'Some Text... (Additional)",
+      "id": "7wBMo8MVSk",
+      "name": "New Balance",
+      "price": 99.98,
+      "quantity": 1,
+      "reviews": "\"\"",
+      "subImgsUrl": [
+        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
+        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
+        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
+        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
+        { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
+      ],
+      "viewsInfo": {
+        "commentsNumber": 4,
+        "viewsNumber": 36
+      }
+    },
+    "p4": {
+      "AdditionalInfo": "This is test...",
+      "baseImgUrl": "https://s6.uupload.ir/files/004_z8ze.jpg",
+      "description": " Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.', AdditionalInfo: 'Some Text... (Additional)",
+      "id": "D8MpaXrLYK",
+      "name": "Adidas",
+      "price": 22.98,
+      "quantity": 1,
+      "reviews": "\"\"",
+      "subImgsUrl": [
+        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
+        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
+        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
+        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
+        { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
+      ],
+      "viewsInfo": {
+        "commentsNumber": 4,
+        "viewsNumber": 36
+      }
+    },
+    "p5": {
+      "AdditionalInfo": "This is test...",
+      "baseImgUrl": "https://s6.uupload.ir/files/005_8h56.jpg",
+      "description": " Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.', AdditionalInfo: 'Some Text... (Additional)",
+      "id": "SSGJO19ZGa",
+      "name": "Vasns",
+      "price": 132.22,
+      "quantity": 1,
+      "reviews": "\"\"",
+      "subImgsUrl": [
+        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
+        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
+        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
+        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
+        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
+      ],
+      "viewsInfo": {
+        "commentsNumber": 414,
+        "viewsNumber": 41
+      }
+    },
+    "p6": {
+      "AdditionalInfo": "This is test...",
+      "baseImgUrl": "https://s6.uupload.ir/files/006_0ndg.jpg",
+      "description": " Some Text... (desc) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti recusandae sunt quae aperiam repellat nostrum, incidunt nobis ipsa adipisci placeat error quidem tempora doloribus similique, eos quaerat rem! Et.', AdditionalInfo: 'Some Text... (Additional)",
+      "id": "4QQ-V6hFmq",
+      "name": "Crocs",
+      "price": 59.35,
+      "quantity": 1,
+      "reviews": "\"\"",
+      "subImgsUrl": [
+        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
+        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
+        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
+        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
+        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
+      ],
+      "viewsInfo": {
+        "commentsNumber": 12,
+        "viewsNumber": 43
+      }
+    }
+  }
+}

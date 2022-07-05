@@ -14,7 +14,7 @@ import SingleBlog from './pages/SingleBlog';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons';
-import { getProducts } from './store/cart-actions';
+import { getHomePageData } from './store/homePage-actions';
 
 library.add(fas, faTwitter, faFontAwesome);
 
@@ -30,9 +30,8 @@ const App = () => {
   const uiSlice = useSelector(state => state.UI);
   const { notification } = uiSlice;
 
-  // console.log(notification);
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getHomePageData());
   }, [dispatch]);
 
   if (notification?.status === 'ADD_ITEM') {
