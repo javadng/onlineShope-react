@@ -6,7 +6,11 @@ import imgBlog3 from '../../../assets/img/blog-3.jpg';
 
 import classes from './blogList.module.scss';
 import Pagination from '../../pagination/Pagination';
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
+import useHttp from '../../../hooks/use-http';
+import { getBlogsList } from '../../../lib/getBlogsList';
+import Spinner from '../../UI/spinners/Spinner';
+import Overlay from '../../UI/Modal/Overlay';
 
 const DUMMY__Blog = [
   {
@@ -85,27 +89,41 @@ const DUMMY__Blog = [
 
 const BlogList = props => {
   const [posts, setPosts] = useState([]);
+  const [sendRequest, httpState] = useHttp(getBlogsList);
+
+  useEffect(() => {
+    sendRequest();
+  }, [sendRequest]);
 
   useEffect(() => {
     window.scrollTo({ behavior: 'smooth', top: '0px' });
   }, [posts]);
-  
-  return (
-    <ul className={classes.list}>
-      {posts.map(item => (
-        <BlogItem
-          image={item.image}
-          title={item.title}
-          date={item.date}
-          year={item.year}
-          id={item.id}
-          key={item.id}
-          desc={item.desc}
-        />
-      ))}
-      <Pagination setPostsState={setPosts} allPosts={DUMMY__Blog} />
-    </ul>
-  );
+
+  if (httpState.status === 'SUCCESS') {
+    return (
+      <ul className={classes.list}>
+        {posts.map(item => (
+          <BlogItem
+            image={item.image}
+            title={item.title}
+            date={item.date}
+            year={item.year}
+            id={item.id}
+            key={item.id}
+            desc={item.desc}
+          />
+        ))}
+        <Pagination setPostsState={setPosts} allPosts={httpState.data} />
+      </ul>
+    );
+  } else {
+    return (
+      <Fragment>
+        <Spinner />
+        <Overlay />
+      </Fragment>
+    );
+  }
 };
 
 export default BlogList;

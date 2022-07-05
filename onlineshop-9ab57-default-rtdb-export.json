@@ -88,11 +88,26 @@
         "javad": ""
       },
       "subImgsUrl": [
-        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
-        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
-        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
-        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
-        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        {
+          "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg",
+          "id": "image1"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg",
+          "id": "image2"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-3_6332.jpg",
+          "id": "imag3"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg",
+          "id": "imag4"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg",
+          "id": "imag5"
+        },
         { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
       ],
       "viewsInfo": {
@@ -110,11 +125,26 @@
       "quantity": 1,
       "reviews": "\"\"",
       "subImgsUrl": [
-        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
-        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
-        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
-        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
-        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
+        {
+          "img": "https://s6.uupload.ir/files/photo-3_6332.jpg",
+          "id": "imag3"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg",
+          "id": "image2"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg",
+          "id": "imag4"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg",
+          "id": "imag5"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg",
+          "id": "image1"
+        },
         { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
       ],
       "viewsInfo": {
@@ -132,11 +162,26 @@
       "quantity": 1,
       "reviews": "\"\"",
       "subImgsUrl": [
-        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
-        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
-        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
-        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
-        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
+        {
+          "img": "https://s6.uupload.ir/files/photo-3_6332.jpg",
+          "id": "imag3"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg",
+          "id": "imag4"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg",
+          "id": "imag5"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg",
+          "id": "image1"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg",
+          "id": "image2"
+        },
         { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
       ],
       "viewsInfo": {
@@ -154,11 +199,26 @@
       "quantity": 1,
       "reviews": "\"\"",
       "subImgsUrl": [
-        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
-        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
-        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
-        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
-        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
+        {
+          "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg",
+          "id": "image2"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg",
+          "id": "image1"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg",
+          "id": "imag5"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg",
+          "id": "imag4"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-3_6332.jpg",
+          "id": "imag3"
+        },
         { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
       ],
       "viewsInfo": {
@@ -176,11 +236,26 @@
       "quantity": 1,
       "reviews": "\"\"",
       "subImgsUrl": [
-        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
-        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
-        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
-        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
-        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        {
+          "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg",
+          "id": "image1"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg",
+          "id": "image2"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-3_6332.jpg",
+          "id": "imag3"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg",
+          "id": "imag4"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg",
+          "id": "imag5"
+        },
         { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
       ],
       "viewsInfo": {
@@ -198,11 +273,26 @@
       "quantity": 1,
       "reviews": "\"\"",
       "subImgsUrl": [
-        { "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg", "id": "image2" },
-        { "img": "https://s6.uupload.ir/files/photo-3_6332.jpg", "id": "imag3" },
-        { "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg", "id": "imag4" },
-        { "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg", "id": "image1" },
-        { "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg", "id": "imag5" },
+        {
+          "img": "https://s6.uupload.ir/files/photo-2_vkrs.jpg",
+          "id": "image2"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-3_6332.jpg",
+          "id": "imag3"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-4_rx0r.jpg",
+          "id": "imag4"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-1_aum5.jpg",
+          "id": "image1"
+        },
+        {
+          "img": "https://s6.uupload.ir/files/photo-5_bzyr.jpg",
+          "id": "imag5"
+        },
         { "img": "https://s6.uupload.ir/files/photo-6_4oe4.jpg", "id": "imag6" }
       ],
       "viewsInfo": {
@@ -210,5 +300,103 @@
         "viewsNumber": 43
       }
     }
-  }
+  },
+  "BlogLists": [
+    {
+      "id": "b1",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-1_bapk.jpg",
+      "date": "8 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b2",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-2_1uaj.jpg",
+      "date": "3 Aug",
+      "year": "2021",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b3",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-3_t87s.jpg",
+      "date": "18 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b4",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/photo-4_agcu.jpg",
+      "date": "8 June",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b5",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/photo-3_4lwo.jpg",
+      "date": "8 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b6",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-1_bapk.jpg",
+      "date": "8 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b7",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-2_1uaj.jpg",
+      "date": "20 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b8",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-3_t87s.jpg",
+      "date": "14 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b9",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/photo-4_agcu.jpg",
+      "date": "10 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b10",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-3_t87s.jpg",
+      "date": "8 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b11",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/photo-4_agcu.jpg",
+      "date": "8 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    },
+    {
+      "id": "b12",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "image": "https://s6.uupload.ir/files/blog-2_1uaj.jpg",
+      "date": "8 Aug",
+      "year": "2022",
+      "desc": "Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet."
+    }
+  ]
 }

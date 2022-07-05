@@ -5,6 +5,7 @@
   position: relative;
   background-color: #fff;
   display: grid;
+  grid-template-rows: 25rem 1fr;
   grid-row-gap: 1rem;
   margin-bottom: 2rem;
   border-radius: 2rem;
@@ -64,9 +65,10 @@
 
 .figureImg {
   width: 100%;
-
+  
   img {
     object-fit: cover;
+    height: 100%;
   }
 }
 
