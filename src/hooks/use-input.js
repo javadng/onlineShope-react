@@ -21,7 +21,7 @@ const reducerFn = (state, action) => {
   return initialState;
 };
 
-const useInput = validateFn => {
+const useInput = (validateFn = () => true) => {
   const [inputState, dispatchInput] = useReducer(reducerFn, initialState);
   const valueIsValid = validateFn(inputState.value);
 

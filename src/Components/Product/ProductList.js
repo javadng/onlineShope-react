@@ -4,15 +4,24 @@ import GridList from '../UI/GridList';
 import { useSelector } from 'react-redux';
 import Spinner from '../UI/spinners/Spinner';
 import Overlay from '../UI/Modal/Overlay';
-import { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
 import classes from './ProductLists.module.scss';
+import useFilter from '../../hooks/use-filter';
+import FilterItems from '../filter/FilterItems';
 
-const   ProductList = props => {
+const ProductList = props => {
   const { products } = useSelector(state => state.products);
   const { notification } = useSelector(state => state.UI);
 
+  const [priceLimit, setPriceLimit] = useState(500);
+  const [filteredItems, filterFunHandler] = useFilter();
+
   let productContent;
+
+  useEffect(() => {
+    filterFunHandler(products, priceLimit);
+  }, [filterFunHandler, priceLimit, products]);
 
   if (notification?.status === 'LOADING') {
     productContent = (
@@ -34,7 +43,7 @@ const   ProductList = props => {
   }
 
   if (products && products.length > 0) {
-    productContent = products.map(product => (
+    productContent = filteredItems.map(product => (
       <ProductItem
         key={product.id}
         img={product.imgUrl}
@@ -46,7 +55,12 @@ const   ProductList = props => {
     ));
   }
 
-  return <GridList className={classes.list}>{productContent}</GridList>;
+  return (
+    <section className={classes.producSection}>
+      <FilterItems setValue={setPriceLimit} />
+      <GridList className={classes.gridlist}>{productContent}</GridList>;
+    </section>
+  );
 };
 
 export default ProductList;
