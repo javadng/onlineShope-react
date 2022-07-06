@@ -9,19 +9,23 @@ import React, { Fragment, useEffect, useState } from 'react';
 import classes from './ProductLists.module.scss';
 import useFilter from '../../hooks/use-filter';
 import FilterItems from '../filter/FilterItems';
+import Pagination from '../pagination/Pagination';
 
 const ProductList = props => {
   const { products } = useSelector(state => state.products);
   const { notification } = useSelector(state => state.UI);
 
   const [priceLimit, setPriceLimit] = useState(500);
-  const [filteredItems, filterFunHandler] = useFilter();
+  const [filterState, filterFunHandler] = useFilter();
+  const [productsShown, setProductShown] = useState([]);
 
   let productContent;
+  let minPrice = 0;
+  let maxPrice = 0;
 
   useEffect(() => {
-    filterFunHandler(products, priceLimit);
-  }, [filterFunHandler, priceLimit, products]);
+    filterFunHandler(productsShown, priceLimit);
+  }, [filterFunHandler, priceLimit, productsShown]);
 
   if (notification?.status === 'LOADING') {
     productContent = (
@@ -43,22 +47,39 @@ const ProductList = props => {
   }
 
   if (products && products.length > 0) {
-    productContent = filteredItems.map(product => (
-      <ProductItem
-        key={product.id}
-        img={product.imgUrl}
-        id={product.id}
-        name={product.name}
-        price={product.price}
-        description={product.description}
-      />
-    ));
+    minPrice = filterState.minPrices;
+    maxPrice = filterState.maxPrices + 10;
+
+    <Fragment>
+      {
+        (productContent = filterState.filterdItems?.map(product => (
+          <ProductItem
+            key={product.id}
+            img={product.imgUrl}
+            id={product.id}
+            name={product.name}
+            price={product.price}
+            description={product.description}
+          />
+        )))
+      }
+    </Fragment>;
   }
 
   return (
     <section className={classes.producSection}>
-      <FilterItems setValue={setPriceLimit} />
-      <GridList className={classes.gridlist}>{productContent}</GridList>;
+      <FilterItems setValue={setPriceLimit} min={minPrice} max={maxPrice} />
+      <GridList className={classes.gridlist}>
+        {productContent}
+        <Pagination
+          setPostsState={setProductShown}
+          currentPage={1}
+          postPerPage={4}
+          allPosts={products}
+          className={classes.pagination}
+        />
+      </GridList>
+      ;
     </section>
   );
 };

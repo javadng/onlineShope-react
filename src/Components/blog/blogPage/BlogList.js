@@ -34,7 +34,12 @@ const BlogList = props => {
             desc={item.desc}
           />
         ))}
-        <Pagination setPostsState={setPosts} allPosts={httpState.data} />
+        <Pagination
+          setPostsState={setPosts}
+          currentPage={1}
+          postPerPage={3}
+          allPosts={httpState.data}
+        />
       </ul>
     );
   } else {

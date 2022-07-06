@@ -24,6 +24,8 @@ const BlogList = props => {
         className={classes.PaginationBtn}
         setPostsState={setBlogsHome}
         allPosts={homeBlog}
+        currentPage={1}
+        postPerPage={3}
       />
     </GridList>
   );

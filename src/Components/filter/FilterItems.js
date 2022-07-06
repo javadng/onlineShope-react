@@ -1,13 +1,16 @@
 import classes from './FilterItems.module.scss';
 import useInput from '../../hooks/use-input';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const FilteItems = props => {
   let { value: inputValue, onChangeHandler: inputOnChageHandler } = useInput();
 
+  const [inputRange, setInputValue] = useState(props.max);
+
   useEffect(() => {
-    props.setValue(+inputValue);
-  }, [inputValue, props]);
+    setInputValue(inputValue === '' ? props.max : inputValue);
+    props.setValue(inputRange);
+  }, [inputValue, props, inputRange]);
 
   return (
     <div className={classes.filter}>
@@ -17,15 +20,15 @@ const FilteItems = props => {
         step="5"
         id="priceRange"
         type="range"
-        min="0"
-        max="500"
-        value={inputValue}
+        min={props.min}
+        max={props.max}
+        value={inputRange}
         onChange={inputOnChageHandler}
         className={classes.inputRange}
       />
       <div className={classes.filterPrice}>
-        <span>from: $ 0</span>
-        <span>to: $ {inputValue}</span>
+        <span>from: $ {props.min}</span>
+        <span>to: $ {Math.round(inputRange)}</span>
       </div>
     </div>
   );

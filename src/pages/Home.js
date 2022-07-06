@@ -21,7 +21,7 @@ const Home = props => {
         />
       </Routes>
       <AboutUs />
-      <Products />
+      <Products isHomeList={true} />
       <Blog />
     </Main>
   );

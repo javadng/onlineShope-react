@@ -4,10 +4,6 @@ import { useEffect, useReducer } from 'react';
 
 import arrayCreator from '../../helpers/arrayCreatror';
 import postsSlicer from '../../helpers/postslicer';
-const initialState = {
-  currentPage: 1,
-  postPerPage: 3,
-};
 
 const reducerFunction = (state, action) => {
   if (action.type === 'NEXT_PAGE') {
@@ -30,14 +26,17 @@ const reducerFunction = (state, action) => {
       postPerPage: state.postPerPage,
     };
   }
-
-  return initialState;
 };
 
 const Pagination = props => {
   const PaginationClasses = `${classes.pageBtns} ${props.className || ''}`;
   const btnClassNames = `${classes.btn}`;
   let pageBtns;
+
+  const initialState = {
+    currentPage: props.currentPage,
+    postPerPage: props.postPerPage,
+  };
 
   const [pagesStates, dispatchPages] = useReducer(
     reducerFunction,

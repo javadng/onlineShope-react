@@ -15,3 +15,7 @@
   grid-gap: 2rem;
   grid-template-columns: minmax(15rem, 25rem) 1fr;
 }
+
+.pagination {
+  grid-column: 1 / -1;
+}
