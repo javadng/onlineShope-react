@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
 import { uiActions } from '../../store/ui-slice';
 
@@ -9,11 +9,19 @@ import { Link } from 'react-router-dom';
 
 import Button from '../UI/Button';
 import './ProductItem.scss';
+import InputChangeNumber from '../UI/InputChangeNumber';
 
 const ProductItem = props => {
   const dispatch = useDispatch();
 
+  const { items } = useSelector(state => state.cart);
+  // console.log(items);
+
   const { name, description, price, id } = props;
+
+  const cartItemExisted = items.find(item => item.id === id);
+
+  let cartAddBtn;
 
   const addToCartHandler = () => {
     dispatch(
@@ -34,6 +42,25 @@ const ProductItem = props => {
     );
   };
 
+  if (!cartItemExisted) {
+    cartAddBtn = (
+      <Button className="addbtn" onClick={addToCartHandler}>
+        <span className="btnText">Add to Cart</span>
+        <FontAwesomeIcon icon={solid('shopping-cart')} />
+      </Button>
+    );
+  } else {
+    cartAddBtn = (
+      <InputChangeNumber
+        className="inputChangeItem"
+        id={id}
+        quantity={cartItemExisted.quantity}
+        price={price}
+        name={name}
+      />
+    );
+  }
+
   return (
     <div className="productitem">
       <figure className="productitem__img">
@@ -48,10 +75,7 @@ const ProductItem = props => {
       </Link>
       <p className="productitem--desc">{description}</p>
       <span className="price">${price.toFixed(2)}</span>
-      <Button className="addbtn" onClick={addToCartHandler}>
-        <span className="btnText">Add to Cart</span>
-        <FontAwesomeIcon icon={solid('shopping-cart')} />
-      </Button>
+      {cartAddBtn}
     </div>
   );
 };

@@ -19,6 +19,8 @@ const ProductList = props => {
   let minPrice = 0;
   let maxPrice = 0;
 
+  // console.log(props.products);
+
   useEffect(() => {
     filterFunHandler(productsShown, priceLimit);
   }, [filterFunHandler, priceLimit, productsShown]);
