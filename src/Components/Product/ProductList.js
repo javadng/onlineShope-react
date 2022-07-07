@@ -1,20 +1,16 @@
 import ProductItem from './ProductItem';
 
 import GridList from '../UI/GridList';
-import { useSelector } from 'react-redux';
-import Spinner from '../UI/spinners/Spinner';
-import Overlay from '../UI/Modal/Overlay';
 import React, { Fragment, useEffect, useState } from 'react';
 
 import classes from './ProductLists.module.scss';
 import useFilter from '../../hooks/use-filter';
 import FilterItems from '../filter/FilterItems';
 import Pagination from '../pagination/Pagination';
+import LoadingSpinner from '../UI/spinners/LoadingSpinner';
+import ErrorMessage from '../UI/ErrorMessage';
 
 const ProductList = props => {
-  const { products } = useSelector(state => state.products);
-  const { notification } = useSelector(state => state.UI);
-
   const [priceLimit, setPriceLimit] = useState(500);
   const [filterState, filterFunHandler] = useFilter();
   const [productsShown, setProductShown] = useState([]);
@@ -27,26 +23,11 @@ const ProductList = props => {
     filterFunHandler(productsShown, priceLimit);
   }, [filterFunHandler, priceLimit, productsShown]);
 
-  if (notification?.status === 'LOADING') {
-    productContent = (
-      <Fragment>
-        <Spinner />
-        <Overlay />
-      </Fragment>
-    );
+  if (props.notification?.status === 'ERROR') {
+    productContent = <ErrorMessage content={props.notification.message} />;
   }
 
-  if (products.length === 0) {
-    productContent = (
-      <Fragment>
-        <p className="center-text fs-5 warning-color">
-          {notification?.message}
-        </p>
-      </Fragment>
-    );
-  }
-
-  if (products && products.length > 0) {
+  if (props.products && props.products.length > 0) {
     minPrice = filterState.minPrices;
     maxPrice = filterState.maxPrices + 10;
 
@@ -70,12 +51,13 @@ const ProductList = props => {
     <section className={classes.producSection}>
       <FilterItems setValue={setPriceLimit} min={minPrice} max={maxPrice} />
       <GridList className={classes.gridlist}>
+        {props.notification?.status === 'LOADING' && <LoadingSpinner />}
         {productContent}
         <Pagination
           setPostsState={setProductShown}
           currentPage={1}
           postPerPage={4}
-          allPosts={products}
+          allPosts={props.products}
           className={classes.pagination}
         />
       </GridList>

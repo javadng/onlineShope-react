@@ -107,6 +107,10 @@ const Pagination = props => {
         );
       }
     );
+  }
+  if (allPosts.length === 0) {
+    // return <Button className={classes.errorBtn}>1 of 1</Button>;
+    return;
   } else {
     pageBtns = arrayCreator(1, allPages).map((item, index) => {
       return (
