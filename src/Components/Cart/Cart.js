@@ -36,7 +36,11 @@ const Cart = props => {
         <span className={`btn ${classes.totalPrice}`}>
           totalPrice : $ {totalPrice.toFixed(2)}
         </span>
-        <NavLink to="/checkout" className={`${classes.modal__btn} btn`}>
+        <NavLink
+          to="/checkout"
+          onClick={props.togglerFn}
+          className={`${classes.modal__btn} btn`}
+        >
           Shopping &rarr;
         </NavLink>
       </footer>
