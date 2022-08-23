@@ -2,7 +2,7 @@ import classes from './FilterItems.module.scss';
 import useInput from '../../hooks/use-input';
 import { useEffect, useState } from 'react';
 
-const FilteItems = props => {
+const FilterItems = props => {
   let { value: inputValue, onChangeHandler: inputOnChageHandler } = useInput();
 
   const [inputRange, setInputValue] = useState(props.max);
@@ -34,4 +34,4 @@ const FilteItems = props => {
   );
 };
 
-export default FilteItems;
+export default FilterItems;

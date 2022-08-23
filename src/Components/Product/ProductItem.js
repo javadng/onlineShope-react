@@ -10,12 +10,12 @@ import { Link } from 'react-router-dom';
 import Button from '../UI/Button';
 import './ProductItem.scss';
 import InputChangeNumber from '../UI/InputChangeNumber';
+import React from 'react';
 
 const ProductItem = props => {
   const dispatch = useDispatch();
 
   const { items } = useSelector(state => state.cart);
-  // console.log(items);
 
   const { name, description, price, id } = props;
 

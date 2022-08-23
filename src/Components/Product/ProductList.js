@@ -1,7 +1,7 @@
 import ProductItem from './ProductItem';
 
 import GridList from '../UI/GridList';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import classes from './ProductLists.module.scss';
 import useFilter from '../../hooks/use-filter';
@@ -31,27 +31,27 @@ const ProductList = props => {
 
   if (props.products && props.products.length > 0) {
     minPrice = filterState.minPrices;
-    maxPrice = filterState.maxPrices + 10;
+    maxPrice = +filterState.maxPrices + 10;
 
-    <Fragment>
-      {
-        (productContent = filterState.filterdItems?.map(product => (
-          <ProductItem
-            key={product.id}
-            img={product.imgUrl}
-            id={product.id}
-            name={product.name}
-            price={product.price}
-            description={product.description}
-          />
-        )))
-      }
-    </Fragment>;
+    productContent = filterState.filterdItems?.map(product => (
+      <ProductItem
+        key={product.id}
+        img={product.imgUrl}
+        id={product.id}
+        name={product.name}
+        price={product.price}
+        description={product.description}
+      />
+    ));
   }
 
   return (
     <section className={classes.producSection}>
-      <FilterItems setValue={setPriceLimit} min={minPrice} max={maxPrice} />
+      <FilterItems
+        setValue={setPriceLimit}
+        min={minPrice}
+        max={maxPrice || ''}
+      />
       <GridList className={classes.gridlist}>
         {props.notification?.status === 'LOADING' && <LoadingSpinner />}
         {productContent}
